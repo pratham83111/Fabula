@@ -5,7 +5,7 @@ import LoginForm from "../../forms/login-form";
 import google from "@/assets/images/icon/google.png";
 import facebook from "@/assets/images/icon/facebook.png";
 
-const LoginModal = () => {
+const LoginModal = ({onlogin} :any) => {
   return (
     <div
       className="modal fade"
@@ -29,7 +29,7 @@ const LoginModal = () => {
               </p>
             </div>
             <div className="form-wrapper m-auto">
-              <LoginForm />
+              <LoginForm  onlogin={onlogin} />
               <div className="d-flex align-items-center mt-30 mb-10">
                 <div className="line"></div>
                 <span className="pe-3 ps-3">OR</span>

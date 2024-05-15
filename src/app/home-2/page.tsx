@@ -9,7 +9,7 @@ import CategorySectionTwo from '../components/category/category-section-2';
 import FeatureFour from '../components/features/feature-four';
 import FeedbackTwo from '../components/feedBacks/feedback-two';
 import BlogTwo from '../components/blogs/blog-two';
-import JobPortalIntroTwo from '../components/job-portal-intro/job-portal-intro-2';
+import JobPortalIntroTwo from '../components/contract-portal-intro/job-portal-intro-2';
 import FooterTwo from '@/layouts/footers/footer-2';
 
 export const metadata: Metadata = {

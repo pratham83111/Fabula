@@ -5,7 +5,7 @@ import Header from '@/layouts/headers/header';
 import FooterOne from '@/layouts/footers/footer-one';
 import JobBreadcrumb from '../components/jobs/breadcrumb/job-breadcrumb';
 import JobGridV3Area from '../components/jobs/grid/job-grid-v3-area';
-import JobPortalIntro from '../components/job-portal-intro/job-portal-intro';
+import JobPortalIntro from '../components/contract-portal-intro/job-portal-intro';
 
 export const metadata: Metadata = {
   title: "Job Grid v3",

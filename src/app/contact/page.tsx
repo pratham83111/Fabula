@@ -8,6 +8,8 @@ import ContactArea from "../components/contact/contact-area";
 
 export const metadata: Metadata = {
   title: "Contact",
+  description: "Contact us for inquiries, feedback, or support. Get in touch with our team through phone, email, or contact form.",
+  keywords : "contact us, contact information, support, inquiries, feedback",
 };
 
 const ContactPage = () => {

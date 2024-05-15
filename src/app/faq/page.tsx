@@ -2,13 +2,16 @@ import React from "react";
 import { Metadata } from "next";
 import Header from "@/layouts/headers/header";
 import Wrapper from "@/layouts/wrapper";
-import JobPortalIntro from "../components/job-portal-intro/job-portal-intro";
+import JobPortalIntro from "../components/contract-portal-intro/job-portal-intro";
 import CompanyBreadcrumb from "../components/common/common-breadcrumb";
 import FooterOne from "@/layouts/footers/footer-one";
 import FaqArea from "../components/faqs/faq-area";
+import HeaderFour from "@/layouts/headers/header-4";
 
 export const metadata: Metadata = {
-  title: "Faq",
+  title: "FAQ",
+  description: "Find answers to frequently asked questions about our platform and services.",
+  keywords:"FAQ, frequently asked questions, help, support",
 };
 
 const FaqPage = () => {
@@ -16,7 +19,7 @@ const FaqPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <Header />
+        <HeaderFour />
         {/* header end */}
 
         {/*breadcrumb start */}

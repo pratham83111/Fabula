@@ -12,7 +12,7 @@ import FancyBannerThree from '../components/fancy-banner/fancy-banner-3';
 import FeedbackThree from '../components/feedBacks/feedback-three';
 import FeatureSix from '../components/features/feature-six';
 import CategorySectionFive from '../components/category/category-section-5';
-import JobPortalIntroTwo from '../components/job-portal-intro/job-portal-intro-2';
+import JobPortalIntroTwo from '../components/contract-portal-intro/job-portal-intro-2';
 import FooterOne from '@/layouts/footers/footer-one';
 
 export const metadata: Metadata = {

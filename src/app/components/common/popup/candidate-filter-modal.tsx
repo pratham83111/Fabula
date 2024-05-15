@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import JobPrices from "../../jobs/filter/job-prices";
-import FilterSkills from "../../candidate/filter/filter-skills";
-import FilterCandidateLocation from "../../candidate/filter/filter-location";
-import FilterEnglishFluency from "../../candidate/filter/filter-english-fluency";
-import SelectCandidateExperience from "../../candidate/filter/select-candidate-experience";
-import SelectCandidateQualification from "../../candidate/filter/select-qualification";
-import SelectCandidateType from "../../candidate/filter/select-gender";
+import FilterSkills from "../../contractor/filter/filter-skills";
+import FilterCandidateLocation from "../../contractor/filter/filter-location";
+import FilterEnglishFluency from "../../contractor/filter/filter-english-fluency";
+import SelectCandidateExperience from "../../contractor/filter/select-candidate-experience";
+import SelectCandidateQualification from "../../contractor/filter/select-qualification";
+import SelectCandidateType from "../../contractor/filter/select-gender";
 
 const CandidateFilterModal = () => {
   const [priceValue, setPriceValue] = useState<number[]>([0, 50000]);

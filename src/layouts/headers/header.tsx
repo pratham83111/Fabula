@@ -11,20 +11,22 @@ import avatar from "@/assets/dashboard/defaultg.png";
 
 const Header = () => {
   const { sticky } = useSticky();
+  const [forgetPasswordPageOpen, setForgetPasswordPageOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const abcd = typeof window !== 'undefined' ? localStorage.getItem('islogin') : null;
+  const loginData = abcd ? JSON.parse(abcd) : null;
+  
+ 
   const toggleLogin = () => {
-    setIsLoggedIn((prevLoggedIn) => {
-      const newLoggedIn = !prevLoggedIn;
-      console.log("isLoggedIn:", newLoggedIn);
-      return newLoggedIn;
-    });
+   if(loginData){
+    localStorage.removeItem('islogin')
+    window.location.reload()
+   }
   };
   
   const handleLogout = () => {
     setIsLoggedIn(false);
   };
-
   return (
     <>
       <header
@@ -49,15 +51,27 @@ const Header = () => {
                   </li>
 
                   <li className="d-none d-md-block">
-                  <a
+                  {loginData && loginData ?  <a
+                      href="/"
+                      className="login-btn-one"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deleteModal"
+                      onClick={() => toggleLogin()} 
+                    >
+                      Logout
+                    </a>
+:
+                  
+                    
+                    <a
                       href="#"
                       className="login-btn-one"
                       data-bs-toggle="modal"
                       data-bs-target="#loginModal"
-                      onClick={() => toggleLogin()} 
+                   
                     >
-                      {isLoggedIn ? "Login" : "Logout"} 
-                    </a>
+                        Login 
+                    </a>}
                   </li>
 
                   <li className="d-none d-md-block ms-4">
@@ -88,24 +102,28 @@ const Header = () => {
                         </Link>
                       </div>
                     </li>
-                    <li className="nav-item dropdown category-btn mega-dropdown-sm">
-                      <a
-                        className="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
-                        aria-expanded="false"
-                      >
-                        <i className="bi bi-grid-fill"></i> Category
-                      </a>
-                      {/* CategoryDropdown start */}
-                      <CategoryDropdown />
-                      {/* CategoryDropdown end */}
-                    </li>
-                    {/* menus start */}
-                    <Menus />
-                    {/* menus end */}
+                    {!forgetPasswordPageOpen && (
+                      <>
+                        <li className="nav-item dropdown category-btn mega-dropdown-sm">
+                          <a
+                            className="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside"
+                            aria-expanded="false"
+                          >
+                            <i className="bi bi-grid-fill"></i> Category
+                          </a>
+                          {/* CategoryDropdown start */}
+                          <CategoryDropdown />
+                          {/* CategoryDropdown end */}
+                        </li>
+                        {/* menus start */}
+                        <Menus />
+                        {/* menus end */}
+                      </>
+                    )}
                     <li className="d-md-none">
                       <Link href="/register" className="job-post-btn tran3s">
                         Post Job
@@ -125,7 +143,7 @@ const Header = () => {
       </header>
 
       {/* login modal start */}
-      <LoginModal />
+      <LoginModal onlogin= {toggleLogin} />
       {/* login modal end */}
     </>
   );

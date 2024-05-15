@@ -4,7 +4,7 @@ import Wrapper from '@/layouts/wrapper';
 import Header from '@/layouts/headers/header';
 import FooterOne from '@/layouts/footers/footer-one';
 import JobBreadcrumb from '../components/jobs/breadcrumb/job-breadcrumb';
-import JobPortalIntro from '../components/job-portal-intro/job-portal-intro';
+import JobPortalIntro from '../components/contract-portal-intro/job-portal-intro';
 import JobListV2Area from '../components/jobs/list/job-list-v2-area';
 
 export const metadata: Metadata = {

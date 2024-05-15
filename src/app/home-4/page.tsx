@@ -9,15 +9,16 @@ import FeedbackOne from "../components/feedBacks/feedback-one";
 import FeatureTwo from "../components/features/feature-two";
 import BlogOne from "../components/blogs/blog-one";
 import FancyBanner from "../components/fancy-banner/fancy-banner";
-import JobPortalIntro from "../components/job-portal-intro/job-portal-intro";
+import JobPortalIntro from "../components/contract-portal-intro/job-portal-intro";
 import FooterOne from "@/layouts/footers/footer-one";
 import Wrapper from "@/layouts/wrapper";
+import HeaderFour from "@/layouts/headers/header-4";
 
 export default function Home() {
   return (
     <Wrapper>
       {/* header start */}
-      <Header />
+      <HeaderFour />
       {/* <Header1/> */}
       {/* header end */}
 

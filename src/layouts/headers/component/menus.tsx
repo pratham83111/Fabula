@@ -3,30 +3,43 @@ import menu_data from "@/data/menu-data";
 import Link from "next/link";
 
 const Menus = () => {
+  const storedData = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('islogin')as any) : null;
+
+  // const storedData = JSON.parse(localStorage.getItem("islogin") as any);
+  const isLogin = storedData ? storedData.isLogin : false;
+  const filteredMenuData = isLogin ? menu_data : menu_data.filter(menu => menu.id !== 6 && menu.title !== 'Dashboard');
+
   return (
     <>
-      {menu_data.map((menu) =>
+      {filteredMenuData &&filteredMenuData.map((menu) =>
         menu.link || menu.sub_menus ? (
           <li key={menu.id} className={`nav-item  ${menu.title === 'Dashboard' ? 'dashboard-menu' : ''}`}>
             <a
-              className="nav-link"
+              className="nav-link dropdown-toggle"
               href="#"
               role="button"
               data-bs-auto-close="outside"
               aria-expanded="false"
-            > <Link href={menu.link} className="dropdown-item ">
-              {menu.title}
-              </Link>
+            >
+              {menu.link ? (
+                <Link href={menu.link} className="dropdown-item">
+                  {menu.title}
+                </Link>
+              ) : (
+                menu.title
+              )}
             </a>
-            <ul className="dropdown-menu">
-              {menu.sub_menus?.map((s, i) => (
-                <li key={i}>
-                  <Link href={s.link} className="dropdown-item">
-                    <span>{s.title}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {menu.sub_menus && (
+              <ul className="dropdown-menu">
+                {menu.sub_menus.map((s, i) => (
+                  <li key={i}>
+                    <Link href={s.link} className="dropdown-item">
+                      <span>{s.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ) : menu.mega_menus ? (
           <li key={menu.id} className="nav-item dropdown mega-dropdown-sm">
@@ -49,31 +62,24 @@ const Menus = () => {
                       <ul className="style-none mega-dropdown-list">
                         {m.sub_menus.map((ms, i) => (
                           <li key={i}>
-                            <Link
-                              href={ms.link}
-                              className="dropdown-item"
-                            >
+                            <Link href={ms.link} className="dropdown-item">
                               <span>{ms.title}</span>
                             </Link>
                           </li>
                         ))}
                       </ul>
                     </div>
-                  </div>
-                ))}
+                  </div>))}
               </li>
             </ul>
           </li>
         ) : (
-          
           <li key={menu.id} className="nav-item">
-            <Link className="nav-link" href='/contact' role="button">
+            <Link className="nav-link" href={menu.link} role="button">
               {menu.title}
             </Link>
           </li>
-
-        ) 
-        
+        )
       )}
     </>
   );

@@ -6,7 +6,7 @@ export function WidgetOne({ cls,style_2 }: { cls: string;style_2?:boolean }) {
     <div className={`${cls} mb-20`}>
       <h5 className={`footer-title ${style_2?'text-white':''}`}>Services​</h5>
       <ul className="footer-nav-link style-none">
-        <li><Link href="/job-grid">Browse Jobs</Link></li>
+        <li><Link href="/contract-grid">Browse Contracts</Link></li>
         <li><Link href="/company">Companies</Link></li>
         <li><Link href="/contractor">Contractors</Link></li>
         <li><Link href="/pricing">Pricing</Link></li>
@@ -21,7 +21,7 @@ export function WidgetTwo({ cls,style_2 }: { cls: string;style_2?:boolean }) {
       <h5 className={`footer-title ${style_2?'text-white':''}`}>Company</h5>
       <ul className="footer-nav-link style-none">
         <li><Link href="/about-us">About us</Link></li>
-        <li><Link href="/blog">Blogs</Link></li>
+        <li><Link href="/blogs">Blogs</Link></li>
         <li><Link href="/faq">FAQ’s</Link></li>
         <li><Link href='/contact'>Contact</Link></li>
       </ul>
@@ -34,10 +34,10 @@ export function WidgetThree({ cls,style_2 }: { cls: string;style_2?:boolean }) {
     <div className={`${cls} mb-20`}>
       <h5 className={`footer-title ${style_2?'text-white':''}`}>Support</h5>
       <ul className="footer-nav-link style-none">
-        <li><Link href='/contact'>Terms of use</Link></li>
-        <li><Link href='/contact'>Terms & conditions</Link></li>
-        <li><Link href='/contact'>Privacy</Link></li>
-        <li><Link href='/contact'>Cookie policy</Link></li>
+        <li><Link href='/termsofuse'>Terms of use</Link></li>
+        <li><Link href='/terms&condition'>Terms & conditions</Link></li>
+        <li><Link href='/privacy'>Privacy</Link></li>
+        <li><Link href='/cookies'>Cookie policy</Link></li>
       </ul>
     </div>
   )

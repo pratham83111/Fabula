@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 import Wrapper from '@/layouts/wrapper';
 import Header from '@/layouts/headers/header';
 import FooterOne from '@/layouts/footers/footer-one';
-import JobPortalIntro from '../components/job-portal-intro/job-portal-intro';
+import JobPortalIntro from '../components/contract-portal-intro/job-portal-intro';
 import JobDetailsBreadcrumb from '../components/jobs/breadcrumb/job-details-breadcrumb';
-import JobDetailsV1Area from '../components/job-details/job-details-v1-area';
+import JobDetailsV1Area from '../components/contract-details/job-details-v1-area';
 import job_data from '@/data/job-data';
 import RelatedJobs from '../components/jobs/related-jobs';
 

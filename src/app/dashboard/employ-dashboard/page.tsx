@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from '@/layouts/wrapper';
-import EmployDashboardMain from '@/app/components/dashboard/employ';
+import EmployDashboardMain from '@/app/components/dashboard/company';
 
 const EmployDashboardPage = () => {
   return (

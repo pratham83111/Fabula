@@ -1,8 +1,8 @@
 'use client'
 import React,{useState} from 'react';
 import Wrapper from '@/layouts/wrapper';
-import EmployAside from '@/app/components/dashboard/employ/aside';
-import EmployJobArea from '@/app/components/dashboard/employ/job-area';
+import EmployAside from '@/app/components/dashboard/company/aside';
+import EmployJobArea from '@/app/components/dashboard/company/job-area';
 
 const EmployDashboardJobsPage = () => {
   const [isOpenSidebar,setIsOpenSidebar] = useState<boolean>(false);

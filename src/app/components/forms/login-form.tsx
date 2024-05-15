@@ -8,9 +8,11 @@ import icon from "@/assets/images/icon/icon_60.svg";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 type IFormData = {
   email: string;
   password: string;
+  isLogin:boolean
 };
 
 const schema = Yup.object().shape({
@@ -21,6 +23,7 @@ const schema = Yup.object().shape({
 const initialFormValues: IFormData = {
   email: "bilhon@gmail.com",
   password: "Mspl@123",
+  isLogin:true,
 };
 
 const resolver: Resolver<IFormData> = async (values) => {
@@ -35,13 +38,13 @@ const resolver: Resolver<IFormData> = async (values) => {
           password: {
             type: "required",
             message: "Password is required.",
-          },
+          },     
         }
       : {},
   };
 };
 
-const LoginForm = () => {
+const LoginForm = ({onlogin}:any) => {
   const [showPass, setShowPass] = useState<boolean>(false);
   const [loginSuccess, setLoginSuccess] = useState<boolean>(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -65,6 +68,7 @@ const LoginForm = () => {
     if (data.email === initialFormValues.email && data.password === initialFormValues.password) {
      window.location.href='/';
      setIsLoggedIn(true);
+   localStorage.setItem('islogin',JSON.stringify(initialFormValues))
       setLoginSuccess(true);
       toast.success("Login successful!");
     } else {
@@ -112,7 +116,7 @@ const LoginForm = () => {
               onClick={() => setShowPass(!showPass)}
             >
               <span className={`passVicon ${showPass ? "eye-slash" : ""}`}>
-                <Image src={icon} alt="icon" />
+                <Image src={icon} alt="icon" />   
               </span>
             </span>
             <div className="help-block with-errors">
@@ -126,7 +130,7 @@ const LoginForm = () => {
               <input type="checkbox" id="remember" />
               <label htmlFor="remember">Keep me logged in</label>
             </div>
-            <a href="#">Forget Password?</a>
+            <a href="/forgetpassword">Forget Password?</a>
           </div>
         </div>
         <div className="col-12">
@@ -134,7 +138,7 @@ const LoginForm = () => {
             type="submit"
             className="btn-eleven fw-500 tran3s d-block mt-20"
           >
-            {isLoggedIn ? "Logout" : "Login" }
+            Login
           </button>
         </div>
       </div>

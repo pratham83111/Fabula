@@ -9,11 +9,11 @@ import JobListOne from "./components/jobs/list/job-list-one";
 import FeedbackOne from "./components/feedBacks/feedback-one";
 import FeatureSeven from "./components/features/feature-seven";
 import FaqOne from "./components/faqs/faq-one";
-import JobPortalIntroTwo from "./components/job-portal-intro/job-portal-intro-2";
+import JobPortalIntroTwo from "./components/contract-portal-intro/job-portal-intro-2";
 import FooterTwo from "@/layouts/footers/footer-2";
 
 export const metadata: Metadata = {
-  title: "Home four",
+  title: "Home",
 };
 
 const HomeFour = () => {
