@@ -11,7 +11,7 @@ import RelatedJobs from '../components/jobs/related-jobs';
 
 
 export const metadata: Metadata = {
-  title: "Job Details v1",
+  title: "Tender Details ",
 };
 
 const JobDetailsV1Page = () => {

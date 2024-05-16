@@ -89,7 +89,7 @@ const nav_data: {
     id: 8,
     icon: nav_7,
     icon_active: nav_7_active,
-    link: "/dashboard/employ-dashboard/setting",
+    link: "/authority/setting",
     title: "Account Settings",
   },
 ];

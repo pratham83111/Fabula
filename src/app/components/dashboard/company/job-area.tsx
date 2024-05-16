@@ -48,7 +48,7 @@ const EmployJobArea = ({setIsOpenSidebar}:IProps) => {
             <div className="nav nav-tabs tab-filter-btn me-4"
               id="nav-tab"
               role="tablist">
-              <Link href="/authority/submit-job">
+              <Link href="/authority/submit-contract">
               <button
                 className="nav-link"
                 data-bs-toggle="tab"

@@ -28,7 +28,7 @@ const menu_data:IMenuData[] = [
   {
     id:2,
     link:'/contract-list',
-    title:'Contract',
+    title:'Tenders',
     sub_menus:[
       {link:'/contract-list-v1',title:'contract List style -1'},
       {link:'/contract-list-v2',title:'contract List style -2'},

@@ -25,6 +25,11 @@ import nav_7 from "@/assets/dashboard/images/icon/icon_7.svg";
 import nav_7_active from "@/assets/dashboard/images/icon/icon_7_active.svg";
 import nav_8 from "@/assets/dashboard/images/icon/icon_8.svg";
 import LogoutModal from "../../common/popup/logout-modal";
+import nav_9 from "@/assets/dashboard/images/icon/icon_40.svg";
+import nav_9_active from "@/assets/dashboard/images/icon/icon_40_active.svg";
+
+
+
 
 // nav data
 const nav_data: {
@@ -78,6 +83,13 @@ const nav_data: {
   },
   {
     id: 7,
+    icon: nav_9,
+    icon_active: nav_9_active,
+    link: "/contractor/membership",
+    title: "Membership",
+  },
+  {
+    id: 8,
     icon: nav_7,
     icon_active: nav_7_active,
     link: "/contractor/setting",
