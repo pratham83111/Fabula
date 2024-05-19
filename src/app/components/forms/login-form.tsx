@@ -7,12 +7,15 @@ import ErrorMsg from "../common/error-msg";
 import icon from "@/assets/images/icon/icon_60.svg";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux";
+import {createLoginSlice,creategetByIdRoleSlice} from "../../../redux/Slice/AuthSlice";
 
+import { ACTION_NAVIGATE } from "next/dist/client/components/router-reducer/router-reducer-types";
 
 type IFormData = {
   email: string;
   password: string;
-  isLogin:boolean
+  
 };
 
 const schema = Yup.object().shape({
@@ -21,9 +24,9 @@ const schema = Yup.object().shape({
 });
 
 const initialFormValues: IFormData = {
-  email: "bilhon@gmail.com",
-  password: "Mspl@123",
-  isLogin:true,
+  email: "",
+  password: "",
+ 
 };
 
 const resolver: Resolver<IFormData> = async (values) => {
@@ -38,17 +41,20 @@ const resolver: Resolver<IFormData> = async (values) => {
           password: {
             type: "required",
             message: "Password is required.",
-          },     
+          },
         }
       : {},
   };
 };
 
-const LoginForm = ({onlogin}:any) => {
+const LoginForm = ({ onlogin }: any) => {
+  const [data , setData] = useState(initialFormValues);
   const [showPass, setShowPass] = useState<boolean>(false);
   const [loginSuccess, setLoginSuccess] = useState<boolean>(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const dispatch = useDispatch();
+  
+  
   const {
     register,
     handleSubmit,
@@ -64,24 +70,56 @@ const LoginForm = ({onlogin}:any) => {
     });
   };
 
-  const onSubmit = (data: IFormData) => {
-    if (data.email === initialFormValues.email && data.password === initialFormValues.password) {
-     window.location.href='/';
-     setIsLoggedIn(true);
-   localStorage.setItem('islogin',JSON.stringify(initialFormValues))
-      setLoginSuccess(true);
-      toast.success("Login successful!");
-    } else {
-      toast.error("Invalid email or password.");
-    }
+  const loginFun = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
   };
+  
 
+ 
+const onSubmit = async() => {
+  // e.preventDefault();
+
+const res = await  dispatch(createLoginSlice  (data) as any)
+if (res?.payload?.isSuccess) {
+  const login =await res?.payload?.data  
+  localStorage.setItem('IsLoginData',JSON.stringify(login))
+
+  const roleRes= await dispatch(creategetByIdRoleSlice  ({id:login?.role} ) as any)
+console.log(roleRes,"u78923950909280958208---230")
+
+    if (roleRes?.payload) {
+  const roleData = roleRes?.payload?.data[0]
+  localStorage.setItem('role',JSON.stringify(roleData))
+
+   if (roleData.name === 'Contractor') {
+           
+    setTimeout(() => {
+      window.location.href="/"
+    }, 200);
+      } else if (roleData.name === 'Company') {
+   
+    setTimeout(() => {
+     window.location.href="/"
+    }, 200);
+      }
+    }
+    else {
+      alert('Invalid User');
+    }
+}
+else {
+    alert('Invalid email or password');
+  }
+   
+};
   useEffect(() => {
     if (loginSuccess) {
       reset(initialFormValues);
     }
   }, [loginSuccess]);
-  
 
   return (
    
@@ -95,6 +133,8 @@ const LoginForm = ({onlogin}:any) => {
               placeholder="james@example.com"
               {...register("email", { required: `Email is required!` })}
               name="email"
+              onChange={loginFun as any}
+              value={data.email as any }
             />
             <div className="help-block with-errors">
               <ErrorMsg msg={errors.email?.message!} />
@@ -110,6 +150,8 @@ const LoginForm = ({onlogin}:any) => {
               className="pass_log_id"
               {...register("password", { required: `Password is required!` })}
               name="password"
+              onChange={loginFun as any}
+              value={data.password as any}
             />
             <span
               className="placeholder_icon"
@@ -138,7 +180,7 @@ const LoginForm = ({onlogin}:any) => {
             type="submit"
             className="btn-eleven fw-500 tran3s d-block mt-20"
           >
-            Login
+            {isLoggedIn ? "Logout" : "Login" }
           </button>
         </div>
       </div>

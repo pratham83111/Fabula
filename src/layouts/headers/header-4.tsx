@@ -13,12 +13,12 @@ const HeaderFour = () => {
   const [forgetPasswordPageOpen, setForgetPasswordPageOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const abcd =
-    typeof window !== "undefined" ? localStorage.getItem("islogin") : null;
+    typeof window !== "undefined" ? localStorage.getItem("isLoginData") : null;
   const loginData = abcd ? JSON.parse(abcd) : null;
 
 
   useEffect(() => {
-    const loginData = typeof window !== "undefined" ? localStorage.getItem("islogin") : null;
+    const loginData = typeof window !== "undefined" ? localStorage.getItem("isLoginData") : null;
     if (loginData) {
       setIsLoggedIn(true);
     }
@@ -26,11 +26,11 @@ const HeaderFour = () => {
 
   const toggleLogin = () => {
     if (isLoggedIn) {
-      localStorage.removeItem("islogin");
+      localStorage.removeItem("isLoginData");
       setIsLoggedIn(false);
     } else {
       // Assuming some login logic here
-      localStorage.setItem("islogin", JSON.stringify(true));
+      localStorage.setItem("isLoginData", JSON.stringify(true));
       setIsLoggedIn(true);
     }
     window.location.reload();

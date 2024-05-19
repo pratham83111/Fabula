@@ -3,7 +3,7 @@ import menu_data from "@/data/menu-data";
 import Link from "next/link";
 
 const Menus = () => {
-  const storedData = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('islogin')as any) : null;
+  const storedData = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('isLoginData')as any) : null;
 
   // const storedData = JSON.parse(localStorage.getItem("islogin") as any);
   const isLogin = storedData ? storedData.isLogin : false;

@@ -13,13 +13,13 @@ const Header = () => {
   const { sticky } = useSticky();
   const [forgetPasswordPageOpen, setForgetPasswordPageOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const abcd = typeof window !== 'undefined' ? localStorage.getItem('islogin') : null;
+  const abcd = typeof window !== 'undefined' ? localStorage.getItem('isLoginData') : null;
   const loginData = abcd ? JSON.parse(abcd) : null;
   
  
   const toggleLogin = () => {
    if(loginData){
-    localStorage.removeItem('islogin')
+    localStorage.removeItem('isLoginData')
     window.location.reload()
    }
   };
@@ -46,7 +46,7 @@ const Header = () => {
                 <ul className="d-flex align-items-center style-none">
                   <li className="d-none d-md-block">
                     <Link href="/register" className="job-post-btn tran3s">
-                      Post Job
+                      Post Jobs
                     </Link>
                   </li>
 

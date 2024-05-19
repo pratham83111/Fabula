@@ -1,10 +1,13 @@
-import React from "react";
+"use client";
+import React, {useState} from "react";
 import Image from "next/image";
 import RegisterForm from "../forms/register-form";
 import google from "@/assets/images/icon/google.png";
 import facebook from "@/assets/images/icon/facebook.png";
 
 const RegisterArea = () => {
+  const [selectRole,SetSelectRole]=useState('66474e3791b94697b50e4671')
+
   return (
     <section className="registration-section position-relative pt-100 lg-pt-80 pb-150 lg-pb-80">
       <div className="container">
@@ -16,40 +19,40 @@ const RegisterArea = () => {
             <ul className="nav nav-tabs border-0 w-100 mt-30" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className="nav-link "
                   data-bs-toggle="tab"
                   data-bs-target="#fc1"
                   role="tab"
                   aria-selected="true"
                   tabIndex={-1}
+                  onClick={()=>SetSelectRole('66474db491b94697b50e466f')}
                 >
-                  Candidates
+                  Bidder
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className="nav-link active"
                   data-bs-toggle="tab"
                   data-bs-target="#fc2"
                   role="tab"
                   aria-selected="false"
                   tabIndex={-1}
+                  onClick={()=>SetSelectRole('66474e3791b94697b50e4671')}
+
                 >
-                  Employer
+                  Company
                 </button>
               </li>
             </ul>
             <div className="tab-content mt-40">
               <div
                 className="tab-pane fade show active"
-                role="tabpanel"
-                id="fc1"
+                
               >
-                <RegisterForm />
+                <RegisterForm selectRole={selectRole}/>
               </div>
-              <div className="tab-pane fade" role="tabpanel" id="fc2">
-                <RegisterForm />
-              </div>
+             
             </div>
 
             <div className="d-flex align-items-center mt-30 mb-10">

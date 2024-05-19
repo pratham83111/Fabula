@@ -57,9 +57,10 @@ const LoginModal = ({onlogin} :any) => {
               </div>
               <p className="text-center mt-10">
                 Do not have an account?{" "}
-                <Link href="/register"  className="fw-500">
-                  Sign up
-                </Link>
+                <span  data-bs-dismiss="modal"
+              aria-label="Close" className="fw-500">
+                  <Link  href="/register" className="fw-500">Sign up</Link>
+                </span>
               </p>
             </div>
           </div>
