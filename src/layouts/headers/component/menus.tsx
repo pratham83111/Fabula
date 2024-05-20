@@ -3,10 +3,15 @@ import menu_data from "@/data/menu-data";
 import Link from "next/link";
 
 const Menus = () => {
-  const storedData = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('isLoginData')as any) : null;
+  let storedData: any = "";
+  if (typeof window !== "undefined") {
+    const Data = JSON.parse(localStorage.getItem('IsLoginData') || "{}");
+    storedData = Data || "";
+  }
 
-  // const storedData = JSON.parse(localStorage.getItem("islogin") as any);
-  const isLogin = storedData ? storedData.isLogin : false;
+  const isLogin = storedData ? true : false;
+  console.log("Is Logged In:", isLogin); // Log the login status
+
   const filteredMenuData = isLogin ? menu_data : menu_data.filter(menu => menu.id !== 6 && menu.title !== 'Dashboard');
 
   return (
