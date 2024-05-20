@@ -1,8 +1,7 @@
 "use client";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// internal
 import Menus from "./component/menus";
 import logo from "@/assets/dashboard/images/logo_01.png";
 import useSticky from "@/hooks/use-sticky";
@@ -12,28 +11,22 @@ const HeaderFour = () => {
   const { sticky } = useSticky();
   const [forgetPasswordPageOpen, setForgetPasswordPageOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const abcd =
-    typeof window !== "undefined" ? localStorage.getItem("isLoginData") : null;
-  const loginData = abcd ? JSON.parse(abcd) : null;
-
+  const [loginData, setLoginData] = useState(null);
 
   useEffect(() => {
-    const loginData = typeof window !== "undefined" ? localStorage.getItem("isLoginData") : null;
-    if (loginData) {
-      setIsLoggedIn(true);
+    if (typeof window !== "undefined") {
+      const abcd = localStorage.getItem("IsLoginData");
+      const parsedData = abcd ? JSON.parse(abcd) : null;
+      setLoginData(parsedData);
+      console.log(parsedData, "472093480923u80923809");
     }
   }, []);
 
   const toggleLogin = () => {
-    if (isLoggedIn) {
-      localStorage.removeItem("isLoginData");
-      setIsLoggedIn(false);
-    } else {
-      // Assuming some login logic here
-      localStorage.setItem("isLoginData", JSON.stringify(true));
-      setIsLoggedIn(true);
+    if (loginData) {
+      localStorage.removeItem("IsLoginData");
+      setLoginData(null);
     }
-    window.location.reload();
   };
 
   const handleLogout = () => {
@@ -63,11 +56,13 @@ const HeaderFour = () => {
               </div>
               <div className="right-widget ms-auto ms-lg-0 order-lg-2">
                 <ul className="d-flex align-items-center style-none">
-                <li className="d-none d-md-block">
-                    {isLoggedIn ? (
+                  <li className="d-none d-md-block">
+                    {loginData ? (
                       <a
                         href="/"
                         className="login-btn-one"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal"
                         onClick={toggleLogin}
                       >
                         Logout
@@ -129,9 +124,7 @@ const HeaderFour = () => {
         </div>
       </header>
 
-    
       <LoginModal onlogin={toggleLogin} />
-     
     </>
   );
 };

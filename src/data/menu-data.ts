@@ -2,9 +2,9 @@ import { IMenuData } from "@/types/menu-data-type";
 
 const userRole: string = "employer"; 
 const determineActiveLink = (role: string): string => {
-  if (role === "employer") {
-    return "/authority";
-  } else if (role === "candidate") {
+  if (role === "company") {
+    return "/company";
+  } else if (role === "contractor") {
     return "/contractor";
   }
      
@@ -114,7 +114,7 @@ const menu_data:IMenuData[] = [
     title: "Dashboard",
     sub_menus: [
       { link: "/contractor", title: "Contractor Dashboard" },
-      { link: "/authority", title: "Company Dashboard" },
+      { link: "/company", title: "Company Dashboard" },
     ],
   },
 ]

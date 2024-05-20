@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import {createLoginSlice,creategetByIdRoleSlice} from "../../../redux/Slice/AuthSlice";
 
 import { ACTION_NAVIGATE } from "next/dist/client/components/router-reducer/router-reducer-types";
+import { usePathname } from "next/navigation";
 
 type IFormData = {
   email: string;
@@ -53,7 +54,7 @@ const LoginForm = ({ onlogin }: any) => {
   const [loginSuccess, setLoginSuccess] = useState<boolean>(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const dispatch = useDispatch();
-  
+  const pathname = usePathname();
   
   const {
     register,
