@@ -1,6 +1,6 @@
 import { IMenuData } from "@/types/menu-data-type";
 
-const userRole: string = "employer"; 
+const userRole: string = "contractor"; 
 const determineActiveLink = (role: string): string => {
   if (role === "company") {
     return "/company";

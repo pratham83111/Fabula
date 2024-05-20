@@ -88,11 +88,10 @@ if (res?.payload?.isSuccess) {
   const login =await res?.payload?.data  
   localStorage.setItem('IsLoginData',JSON.stringify(login))
 
-  const roleRes= await dispatch(creategetByIdRoleSlice  ({id:login?.role} ) as any)
-console.log(roleRes,"u78923950909280958208---230")
+  
 
-    if (roleRes?.payload) {
-  const roleData = roleRes?.payload?.data[0]
+    if (login?.role) {
+  const roleData = login?.role
   localStorage.setItem('role',JSON.stringify(roleData))
 
    if (roleData.name === 'Contractor') {
