@@ -6,9 +6,10 @@ import JobBreadcrumb from '../components/jobs/breadcrumb/job-breadcrumb';
 import JobPortalIntro from '../components/contract-portal-intro/job-portal-intro';
 import CandidateV1Area from '../components/contractor/candidate-v1-area';
 import FooterOne from '@/layouts/footers/footer-one';
+import HeaderFour from '@/layouts/headers/header-4';
 
 export const metadata: Metadata = {
-  title: "Candidate v2",
+  title: "Contractor's",
 };
 
 
@@ -17,7 +18,7 @@ const CandidateV2Page = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <Header />
+        <HeaderFour />
         {/* header end */}
 
         {/* search breadcrumb start */}

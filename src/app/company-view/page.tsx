@@ -6,6 +6,7 @@ import JobPortalIntro from "../components/contract-portal-intro/job-portal-intro
 import CompanyBreadcrumb from "../components/common/common-breadcrumb";
 import FooterOne from "@/layouts/footers/footer-one";
 import CompanyV1Area from "../components/company/company-v1-area";
+import HeaderFour from "@/layouts/headers/header-4";
 
 export const metadata: Metadata = {
   title: "Company v1",
@@ -16,7 +17,7 @@ const CompanyV1Page = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <Header />
+        <HeaderFour />
         {/* header end */}
 
         {/*breadcrumb start */}

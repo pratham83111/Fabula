@@ -1,6 +1,10 @@
 import { IMenuData } from "@/types/menu-data-type";
 
-const userRole: string = ""; 
+let userRole: string = ""; 
+if (typeof window !== "undefined") {
+  const role = JSON.parse(localStorage.getItem('role') || "{}");
+  userRole = role?.name?.toLowerCase() || "";
+}
 const determineActiveLink = (role: string): string => {
   if (role === "company") {
     return "/company";
@@ -43,13 +47,13 @@ const menu_data:IMenuData[] = [
   // },
   {
     id: 3,
-    link: userRole === 'contractor' ? '/company' : '/contractor',
-  title: userRole === 'contarctor' ? 'Company' : 'Bidder',
+    link: userRole === 'company' ? '/contractors-view' : '/tenders-list',
+  title: userRole === 'company' ? 'Bidder' : 'Tenders',
     mega_menus: [
       {
         id: 1,
-        title: 'Contractor',
-        sub_menus:userRole === 'company' ? [
+        title: userRole === 'company' ? 'Bidder' : 'Tenders',
+        sub_menus: userRole === 'company' ? [
           { link: '/contract-list-v1', title: 'Contract List style -1' },
           { link: '/contract-list-v2', title: 'Contract List style -2' },
           { link: '/contract-list', title: 'Contract List style -3' },

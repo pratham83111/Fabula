@@ -5,6 +5,8 @@ import Wrapper from "@/layouts/wrapper";
 import FooterOne from "@/layouts/footers/footer-one";
 import MapArea from "../components/contact/map-area";
 import ContactArea from "../components/contact/contact-area";
+import HeaderThree from "@/layouts/headers/header-3";
+import HeaderFour from "@/layouts/headers/header-4";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -17,7 +19,7 @@ const ContactPage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <Header />
+        <HeaderFour />
         {/* header end */}
 
         {/*MapArea start */}

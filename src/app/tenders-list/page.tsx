@@ -6,9 +6,10 @@ import JobBreadcrumb from '../components/jobs/breadcrumb/job-breadcrumb';
 import JobListThree from '../components/jobs/list/job-list-three';
 import JobPortalIntro from '../components/contract-portal-intro/job-portal-intro';
 import FooterOne from '@/layouts/footers/footer-one';
+import HeaderFour from '@/layouts/headers/header-4';
 
 export const metadata: Metadata = {
-  title: "Job List v1",
+  title: "Tender's List ",
 };
 
 
@@ -17,7 +18,7 @@ const JobListOnePage = () => {
     <Wrapper>
       <div className="main-page-wrapper">
         {/* header start */}
-        <Header />
+        <HeaderFour />
         {/* header end */}
 
         {/* search breadcrumb start */}
