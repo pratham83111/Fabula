@@ -97,12 +97,12 @@ if (res?.payload?.isSuccess) {
    if (roleData.name === 'Contractor') {
            
     setTimeout(() => {
-      window.location.href="/"
+      window.location.href="/contractor"
     }, 200);
       } else if (roleData.name === 'Company') {
    
     setTimeout(() => {
-     window.location.href="/"
+     window.location.href="/company"
     }, 200);
       }
     }
