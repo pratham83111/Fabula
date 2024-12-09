@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import Header from "@/layouts/headers/header";
+import Header from "@/layouts/headers/header-4";
 import Wrapper from "@/layouts/wrapper";
 import CompanyBreadcrumb from "../components/common/common-breadcrumb";
 import FooterOne from "@/layouts/footers/footer-one";

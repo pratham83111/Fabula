@@ -49,7 +49,7 @@ const HeaderThree = () => {
               <div className="right-widget ms-auto ms-xl-5 order-lg-3">
                 <ul className="d-flex align-items-center style-none">
                   <li><a href="#" className="fw-500 login-btn-two" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
-                  <li className="d-none d-lg-block ms-4"><Link href='/register' className="btn-five">Register</Link></li>
+                  <li className="d-none d-lg-block ms-4"><Link href='/register' className="btn-five">Register </Link></li>
                 </ul>
               </div>
               <nav className="navbar navbar-expand-lg p0  ms-3 ms-lg-auto order-lg-2">
