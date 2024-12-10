@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 // internal
-import logo from "@/assets/images/logo/logo_03.png";
+// import logo from "@/assets/images/logo/logo_03.png";
 import logo_2 from "@/assets/images/logo/logo_04.png";
 import logo_w from "@/assets/images/logo/logo_06.png";
 import shape from "@/assets/images/shape/shape_28.svg";
 import { WidgetOne, WidgetThree, WidgetTwo } from "./component/footer-widgets";
 import SocialLinks from "./component/social-links";
+import logo from '@/assets/dashboard/images/logo_01.png';
 
 const FooterOne = ({
 	bottom_bg,
@@ -26,8 +27,13 @@ const FooterOne = ({
 						<div className="col-lg-2 col-md-3 footer-intro mb-15">
 							<div className="logo mb-15">
 								<Link href="/" className="d-flex align-items-center">
-									<Image src={style_2 ? logo_w : style_3 ? logo_2 : logo} alt="logo" priority />
+									{/* <Image src={style_2 ? logo_w : style_3 ? logo_2 : logo} alt="logo" priority /> */}
 								</Link>
+								<Link href="/" className="d-flex align-items-center">
+                  <Image src={logo} alt="logo" height={70} width={100} priority />
+                </Link>
+								
+
 							</div>
 							<Image
 								src={shape}

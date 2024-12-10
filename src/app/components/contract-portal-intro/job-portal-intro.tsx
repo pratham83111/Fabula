@@ -9,9 +9,9 @@ const JobPortalIntro = ({top_border=false}:{top_border?:boolean}) => {
           <div className="row align-items-center">
             <div className="col-lg-7">
               <div className="text-center text-lg-start wow fadeInUp" data-wow-delay="0.3s">
-                <h2>Most complete job portal.</h2>
+                <h2>Most complete Contract portal.</h2>
                 <p className="text-md m0 md-pb-20">
-                  Signup and start find your job or talents.
+                  Signup and start find your job or Bidder.
                 </p>
               </div>
             </div>
@@ -19,12 +19,12 @@ const JobPortalIntro = ({top_border=false}:{top_border?:boolean}) => {
               <ul className="btn-group style-none d-flex flex-wrap justify-content-center justify-content-lg-end">
                 <li className="me-2">
                   <Link href="/job-list-v1" className="btn-three">
-                    Looking for job?
+                    Looking for Contract?
                   </Link>
                 </li>
                 <li className="ms-2">
                   <Link href="/register" className="btn-four">
-                    Post a job
+                    Post a Contract
                   </Link>
                 </li>
               </ul>

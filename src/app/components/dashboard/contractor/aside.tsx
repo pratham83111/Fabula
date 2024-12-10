@@ -72,7 +72,7 @@ const nav_data: {
     icon: nav_5,
     icon_active: nav_5_active,
     link: "/contractor/contract-alert",
-    title: "Contract Alert",
+    title: "My Contract ",
   },
   {
     id: 6,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Wrapper from '@/layouts/wrapper';
-import Header from '@/layouts/headers/header';
+import Header from '@/layouts/headers/header-4';
 import FooterOne from '@/layouts/footers/footer-one';
 import JobBreadcrumb from '../components/jobs/breadcrumb/job-breadcrumb';
 import JobPortalIntro from '../components/contract-portal-intro/job-portal-intro';

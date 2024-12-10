@@ -54,7 +54,7 @@ const DashboardArea = ({setIsOpenSidebar}:IProps) => {
           <CardItem img={icon_1} title="Total Visitor" value="1.7k+" />
           <CardItem img={icon_2} title="Shortlisted" value="03" />
           <CardItem img={icon_3} title="Views" value="2.1k" />
-          <CardItem img={icon_4} title="Applied Job" value="07" />
+          <CardItem img={icon_4} title="Applied Contract" value="07" />
         </div>
 
         <div className="row d-flex pt-50 lg-pt-10">
@@ -72,7 +72,7 @@ const DashboardArea = ({setIsOpenSidebar}:IProps) => {
           </div>
           <div className="col-xl-5 col-lg-6 d-flex">
             <div className="recent-job-tab bg-white border-20 mt-30 w-100">
-              <h4 className="dash-title-two">Recent Applied Job</h4>
+              <h4 className="dash-title-two">Recent Applied Contract</h4>
               <div className="wrapper">
                 {job_items.map((j) => (
                   <div

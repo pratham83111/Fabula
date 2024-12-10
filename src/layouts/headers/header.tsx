@@ -60,9 +60,7 @@ const Header = () => {
                     >
                       Logout
                     </a>
-:
-                  
-                    
+                    :             
                     <a
                       href="#"
                       className="login-btn-one"
