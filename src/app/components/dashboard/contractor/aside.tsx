@@ -104,6 +104,13 @@ type IProps = {
 
 const CandidateAside = ({isOpenSidebar,setIsOpenSidebar}:IProps) => {
   const pathname = usePathname();
+
+
+  const Logout = ()=>{
+    localStorage.removeItem("IsLoginData");
+    window.location.href="/"
+  }
+
   return (
     <>
     <aside className={`dash-aside-navbar ${isOpenSidebar?'show':''}`}>
@@ -200,7 +207,7 @@ const CandidateAside = ({isOpenSidebar,setIsOpenSidebar}:IProps) => {
           <p>Profile Complete</p>
         </div>
 
-        <a href="#" className="d-flex w-100 align-items-center logout-btn">
+        <a href="#" onClick={Logout} className="d-flex w-100 align-items-center logout-btn">
           <Image src={logout} alt="icon" className="lazy-img" />
           <span>Logout</span>
         </a>

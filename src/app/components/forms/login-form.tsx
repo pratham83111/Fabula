@@ -107,11 +107,11 @@ if (res?.payload?.isSuccess) {
       }
     }
     else {
-      alert('Invalid User');
+      toast.error('Invalid User');
     }
 }
 else {
-    alert('Invalid email or password');
+  toast.warning('Invalid email or password');
   }
    
 };

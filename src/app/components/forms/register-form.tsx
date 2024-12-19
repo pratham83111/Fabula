@@ -7,6 +7,7 @@ import ErrorMsg from "../common/error-msg";
 import { useDispatch } from "react-redux";
 import { createUserSlice } from "../../../redux/Slice/AuthSlice";
 import { ModeId } from "@/utils/utils";
+import { toast } from "react-toastify";
 
 const RegisterForm = ({ selectRole }: any) => {
   const [showPass, setShowPass] = useState<boolean>(false);
@@ -26,7 +27,7 @@ const RegisterForm = ({ selectRole }: any) => {
     dispatch(createUserSlice({ ...values, mode: ModeId, role:selectRole }) as any);
     setUserRegister(true);
     localStorage.setItem("userData", JSON.stringify(values));
-    alert("Registered successfully!");
+    toast("Registered successfully!");
     resetForm();
     setSubmitting(false);
   };
@@ -57,21 +58,21 @@ const RegisterForm = ({ selectRole }: any) => {
               <div className="input-group-meta position-relative mb-25">
                 <label>Name*</label>
                 <Field type="text" name="fullname" placeholder="James Brower" className="form-control" />
-                <ErrorMessage name="fullname" component="div" className="help-block with-errors" />
+                <ErrorMessage name="fullname"  component="div" className="help-block with-errors text-danger" />
               </div>
             </div>
             <div className="col-12">
               <div className="input-group-meta position-relative mb-25">
                 <label>Email*</label>
                 <Field type="email" name="email" placeholder="james@example.com" className="form-control" />
-                <ErrorMessage name="email" component="div" className="help-block with-errors" />
+                <ErrorMessage name="email" component="div" className="help-block with-errors text-danger" />
               </div>
             </div>
             <div className="col-12">
               <div className="input-group-meta position-relative mb-25">
                 <label>Phone Number*</label>
                 <Field type="tel" name="contact_number" placeholder="Enter Phone Number" className="form-control" />
-                <ErrorMessage name="contact_number" component="div" className="help-block with-errors" />
+                <ErrorMessage name="contact_number" component="div" className="help-block with-errors text-danger" />
               </div>
             </div>
             <div className="col-12">
@@ -83,7 +84,7 @@ const RegisterForm = ({ selectRole }: any) => {
                     <Image src={icon} alt="pass-icon" />
                   </span>
                 </span>
-                <ErrorMessage name="password" component="div" className="help-block with-errors" />
+                <ErrorMessage name="password" component="div" className="help-block with-errors text-danger" />
               </div>
             </div>
             <div className="bg-white card-box border-20 mt-40 col-12">
@@ -91,7 +92,7 @@ const RegisterForm = ({ selectRole }: any) => {
               <div className="input-group-meta position-relative mb-25">
                 <label>Address*</label>
                 <Field type="text" name="Location" placeholder="Enter Your Address" className="form-control" />
-                <ErrorMessage name="Location" component="div" className="help-block with-errors" />
+                <ErrorMessage name="Location" component="div" className="help-block with-errors text-danger" />
               </div>
             </div>
             <div className="col-12">
