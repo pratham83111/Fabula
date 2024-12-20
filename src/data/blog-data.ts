@@ -9,13 +9,20 @@ import blog_7 from '@/assets/images/blog/blog_img_07.jpg';
 import blog_8 from '@/assets/images/blog/blog_img_08.jpg';
 import blog_9 from '@/assets/images/blog/blog_img_09.jpg';
 import blog_10 from '@/assets/images/blog/blog_img_10.jpg';
-import blog_11 from '@/assets/images/blog/blog_img_11.jpg';
-import blog_12 from '@/assets/images/blog/blog_img_12.jpg';
-import blog_13 from '@/assets/images/blog/blog_img_13.jpg';
-import blog_14 from '@/assets/images/blog/blog_img_14.jpg';
-import blog_15 from '@/assets/images/blog/blog_img_15.jpg';
-import blog_16 from '@/assets/images/blog/blog_img_16.jpg';
-import blog_17 from '@/assets/images/blog/blog_img_17.jpg';
+// import blog_11 from '@/assets/images/blog/blog_img_11.jpg';
+import blog_11 from '@/assets/images/blog/successful-business-man-signing-documents-modern-office (1).jpg';
+
+// import blog_12 from '@/assets/images/blog/blog_img_12.jpg';
+import blog_12 from '@/assets/images/blog/breakup-marriage-couple-with-divorce-certification (1).jpg';
+
+// import blog_13 from '@/assets/images/blog/blog_img_13.jpg';
+import blog_13 from '@/assets/images/blog/close-up-portrait-woman-holding-pencil (1).jpg';
+
+// import blog_14 from '@/assets/images/blog/blog_img_14.jpg';
+import blog_14 from '@/assets/images/blog/people-sitting-desk-working (1).jpg';
+import blog_15 from '@/assets/images/blog/2869279.jpg';
+import blog_16 from '@/assets/images/blog/2197781.jpg';
+import blog_17 from '@/assets/images/blog/20943572.jpg';
 import blog_grid_1 from '@/assets/images/blog/blog_img_18.jpg';
 import blog_grid_2 from '@/assets/images/blog/blog_img_19.jpg';
 import blog_grid_3 from '@/assets/images/blog/blog_img_20.jpg';

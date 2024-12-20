@@ -68,10 +68,10 @@ const HeroBannerFour = () => {
             </div>
           </div>
         </div>
-        <Image src={screen_1} alt="screen" className="lazy-img shapes shape_01" />
+        {/* <Image src={screen_1} alt="screen" className="lazy-img shapes shape_01" />
         <Image src={screen_2} alt="screen" className="lazy-img shapes shape_02" />
         <Image src={screen_3} alt="screen" className="lazy-img shapes shape_03" />
-        <Image src={screen_4} alt="screen" className="lazy-img shapes shape_04" />
+        <Image src={screen_4} alt="screen" className="lazy-img shapes shape_04" /> */}
       </div>
     </>
   );

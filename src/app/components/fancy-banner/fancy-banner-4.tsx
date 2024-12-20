@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import screen from '@/assets/images/assets/screen_14.png'
+// import screen from '@/assets/images/assets/screen_14.png'
+import screen from '@/assets/images/assets/low-angle-view-skyscrapers (1).jpg'
+
 import Link from 'next/link';
 import CounterOne from '../counter/counter-one';
 
