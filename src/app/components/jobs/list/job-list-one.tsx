@@ -21,7 +21,7 @@ const JobListOne = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col-lg-6">
               <div className="title-one">
-                <h2 className="text-dark wow fadeInUp" data-wow-delay="0.3s">New job listing</h2>
+                <h2 className="text-dark wow fadeInUp" data-wow-delay="0.3s">New Contracts listing</h2>
               </div>
             </div>
             <div className="col-lg-5">

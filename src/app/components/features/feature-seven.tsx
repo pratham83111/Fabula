@@ -1,9 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import img_1 from '@/assets/images/assets/img_11.jpg';
-import img_2 from '@/assets/images/assets/img_12.jpg';
-import img_3 from '@/assets/images/assets/img_13.jpg';
+// import img_1 from '@/assets/images/assets/img_11.jpg';
+import img_1 from '@/assets/images/assets/2150563151.png';
+
+// import img_2 from '@/assets/images/assets/img_12.jpg';
+import img_2 from '@/assets/images/assets/7619.png';
+// import img_3 from '@/assets/images/assets/img_13.jpg';
+import img_3 from '@/assets/images/assets/pexels-pixabay-416405   fdbfdb.jpg';
+
+
 import shape_1 from '@/assets/images/shape/shape_06.svg';
 import shape_2 from '@/assets/images/shape/shape_21.svg';
 import AccordionItem from '../accordion/accordion-item';
@@ -31,7 +37,7 @@ const FeatureSeven = () => {
               <div className="img-data position-relative me-xl-5 md-mt-20">
                 <div className="row align-items-center">
                   <div className="col-6">
-                    <Image src={img_1} alt="image" className="lazy-img mt-35 md-mt-20 wow fadeInLeft" />
+                    <Image src={img_1} alt="image" className="lazy-img mt-35 md-mt-20 wow fadeInLeft" />  
                   </div>
                   <div className="col-6">
                     <Image src={img_2} alt="image" className="lazy-img mt-35 md-mt-20 wow fadeInDown" />

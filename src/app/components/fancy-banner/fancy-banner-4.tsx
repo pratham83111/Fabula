@@ -16,11 +16,11 @@ const FancyBannerFour = () => {
 						<div className="col-lg-6 order-lg-last ms-auto">
 							<div className="text-wrapper wow fadeInRight">
 								<div className="title-one mb-45 lg-mb-30">
-									<h2 className="text-white">Get the job of your dreams quickly.</h2>
+									<h2 className="text-white">Get the contracts of your dreams quickly.</h2>
 								</div>
 								<p className="text-white text-md mb-55 lg-mb-30">Commonly used in the graphic, print publishing industris
 									for previewing visual mockups. limited social discrimination.</p>
-								<Link href="/job-list-v1" className="find-job-btn d-flex align-items-center text-white">
+								<Link href="/contract-grid" className="find-job-btn d-flex align-items-center text-white">
 									<span className="fw-500">Find your job.</span>
 									<span className="ms-1"> <u>Explore all</u></span>
 									<span className="ms-auto"><i className="bi bi-chevron-right"></i></span>
