@@ -9,72 +9,89 @@ import Pagination from "@/ui/pagination";
 import JobGridItem from "../grid/job-grid-item";
 import { useAppSelector } from "@/redux/hook";
 import NiceSelect from "@/ui/nice-select";
+import { getAlljobs } from "@/redux/Api/JobApi";
 
 
-const JobListThree = ({ itemsPerPage,grid_style=false }: { itemsPerPage: number;grid_style?:boolean }) => {
-  let all_jobs = job_data;
+const JobListThree = ({ itemsPerPage, grid_style = false }: { itemsPerPage: number; grid_style?: boolean }) => {
   const maxPrice = job_data.reduce((max, job) => {
     return job.salary > max ? job.salary : max;
   }, 0);
   const { category, experience, job_type, location, tags } = useAppSelector(
     (state) => state.filter
   );
+  const [all_jobs, setAll_Jobs] = useState<any[]>([]);
   const [currentItems, setCurrentItems] = useState<IJobType[] | null>(null);
   const [filterItems, setFilterItems] = useState<IJobType[]>([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const [jobType, setJobType] = useState(grid_style ?"grid" : "list");
+  const [jobType, setJobType] = useState(grid_style ? "grid" : "list");
   const [priceValue, setPriceValue] = useState([0, maxPrice]);
   const [shortValue, setShortValue] = useState('');
 
-  useEffect(() => {
-    // Filter the job_data array based on the selected filters
-    let filteredData = all_jobs
-      .filter((item) => category.length !== 0 ? category.some((c) => item.category.includes(c)) : true)
-      .filter((item) =>
-        experience.length !== 0
-          ? experience.some((e) => item.experience.trim().toLowerCase() === e.trim().toLowerCase()) : true
-      )
-      .filter((item) => (job_type ? item.duration === job_type : true))
-      .filter((l) => location ? slugify(l.location.split(',').join('-').toLowerCase(),'-') === location : true)
-      .filter((item) => tags.length !== 0 ? tags.some((t) => item?.tags?.includes(t)) : true)
-      .filter((j) => j.salary >= priceValue[0] && j.salary <= priceValue[1]);
 
-      if (shortValue === 'price-low-to-high') {
-        filteredData = filteredData.slice()
-          .sort((a, b) => Number(a.salary) - Number(b.salary))
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const jobss = await getAlljobs();
+        console.log("CCC", jobss)
+        setFilterItems(jobss);
+        setCurrentItems(jobss)
+
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
       }
-    
-      if (shortValue === 'price-high-to-low') {
-        filteredData = filteredData.slice()
-          .sort((a, b) => Number(b.salary) - Number(a.salary));
-      }
-    const endOffset = itemOffset + itemsPerPage;
-    setFilterItems(filteredData)
-    setCurrentItems(filteredData.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(filteredData.length / itemsPerPage));
-  }, [
-    itemOffset,
-    itemsPerPage,
-    category,
-    experience,
-    job_type,
-    location,
-    tags,
-    all_jobs,
-    priceValue,
-    shortValue
-  ]);
+    };
+    fetchJobs();
+  }, []);
+
+  // useEffect(() => {
+  //   // Filter the job_data array based on the selected filters
+  //   let filteredData = all_jobs
+  //     .filter((item) => category.length !== 0 ? category.some((c) => item.category.includes(c)) : true)
+  //     .filter((item) =>
+  //       experience.length !== 0
+  //         ? experience.some((e) => item.experience.trim().toLowerCase() === e.trim().toLowerCase()) : true
+  //     )
+  //     .filter((item) => (job_type ? item.duration === job_type : true))
+  //     .filter((l) => location ? slugify(l.location.split(',').join('-').toLowerCase(),'-') === location : true)
+  //     .filter((item) => tags.length !== 0 ? tags.some((t) => item?.tags?.includes(t)) : true)
+  //     .filter((j) => j.salary >= priceValue[0] && j.salary <= priceValue[1]);
+
+  //     if (shortValue === 'price-low-to-high') {
+  //       filteredData = filteredData.slice()
+  //         .sort((a, b) => Number(a.salary) - Number(b.salary))
+  //     }
+
+  //     if (shortValue === 'price-high-to-low') {
+  //       filteredData = filteredData.slice()
+  //         .sort((a, b) => Number(b.salary) - Number(a.salary));
+  //     }
+  //   const endOffset = itemOffset + itemsPerPage;
+  //   setFilterItems(filteredData)
+  //   setCurrentItems(filteredData.slice(itemOffset, endOffset));
+  //   setPageCount(Math.ceil(filteredData.length / itemsPerPage));
+  // }, [
+  //   itemOffset,
+  //   itemsPerPage,
+  //   category,
+  //   experience,
+  //   job_type,
+  //   location,
+  //   tags,
+  //   all_jobs,
+  //   priceValue,
+  //   shortValue
+  // ]);
 
 
   const handlePageClick = (event: { selected: number }) => {
     const newOffset = (event.selected * itemsPerPage) % all_jobs.length;
     setItemOffset(newOffset);
   };
-// handleShort
-const handleShort = (item: { value: string; label: string }) => {
-  setShortValue(item.value)
-}
+  // handleShort
+  const handleShort = (item: { value: string; label: string }) => {
+    setShortValue(item.value)
+  }
   return (
     <section className="job-listing-three pt-110 lg-pt-80 pb-160 xl-pb-150 lg-pb-80">
       <div className="container">
@@ -106,9 +123,9 @@ const handleShort = (item: { value: string; label: string }) => {
                     <div className="text-dark fw-500 me-2">Short:</div>
                     <NiceSelect
                       options={[
-                        {value:'',label:'Price Short'},
-                        {value:'price-low-to-high',label:'low to high'},
-                        {value:'price-high-to-low',label:'High to low'},
+                        { value: '', label: 'Price Short' },
+                        { value: 'price-low-to-high', label: 'low to high' },
+                        { value: 'price-high-to-low', label: 'High to low' },
                       ]}
                       defaultCurrent={0}
                       onChange={(item) => handleShort(item)}
@@ -138,7 +155,7 @@ const handleShort = (item: { value: string; label: string }) => {
               >
                 {currentItems &&
                   currentItems.map((job) => (
-                    <ListItemTwo key={job.id} item={job} />
+                    <ListItemTwo key={job._id} item={job} />
                   ))}
               </div>
 
@@ -148,7 +165,7 @@ const handleShort = (item: { value: string; label: string }) => {
                 <div className="row">
                   {currentItems &&
                     currentItems.map((job) => (
-                      <div key={job.id} className="col-sm-6 mb-30">
+                      <div key={job._id} className="col-sm-6 mb-30">
                         <JobGridItem item={job} />
                       </div>
                     ))}

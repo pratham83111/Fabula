@@ -30,7 +30,7 @@ const slider_setting = {
 };
 const RelatedJobs = ({category}:{category:string[]}) => {
   const job_items = job_data.filter((job) => {
-    return category.some((c) => job.category.includes(c));
+    // return category.some((c) => job.category.includes(c));
   });;
   const sliderRef = useRef<Slider | null>(null);
 
@@ -51,7 +51,7 @@ const RelatedJobs = ({category}:{category:string[]}) => {
 
           <Slider {...slider_setting} ref={sliderRef} className="related-job-slider">
             {job_items.map((j) => (
-              <div key={j.id} className="item">
+              <div key={j._id} className="item">
                 <JobGridItem item={j} />
               </div>
             ))}

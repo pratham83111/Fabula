@@ -8,7 +8,7 @@ import { add_to_wishlist } from "@/redux/features/wishlist";
 
 const JobGridItem = ({ item,style_2=true }: { item: IJobType;style_2?:boolean }) => {
   const {
-    id,
+    _id,
     logo,
     duration,
     location,
@@ -17,7 +17,7 @@ const JobGridItem = ({ item,style_2=true }: { item: IJobType;style_2?:boolean })
     title,
   } = item || {};
   const {wishlist} = useAppSelector(state => state.wishlist);
-  const isActive = wishlist.some(p => p.id === id);
+  const isActive = wishlist.some(p => p._id === _id);
   const dispatch = useAppDispatch();
   // handle add wishlist
   const handleAddWishlist = (item: IJobType) => {
@@ -25,7 +25,7 @@ const JobGridItem = ({ item,style_2=true }: { item: IJobType;style_2?:boolean })
   };
   return (
     <div className={`job-list-two ${style_2?'style-two':''} position-relative`}>
-      <Link href={`/job-details-v1/${id}`} className="logo">
+      <Link href={`/job-details-v1/${_id}`} className="logo">
         <Image src={logo} alt="logo" style={{height:'auto',width:'auto'}} className="lazy-img m-auto" />
       </Link>
       <a onClick={() => handleAddWishlist(item)}
@@ -35,14 +35,14 @@ const JobGridItem = ({ item,style_2=true }: { item: IJobType;style_2?:boolean })
         <i className="bi bi-bookmark-dash"></i>
       </a>
       <div>
-        <Link href={`/job-details-v1/${id}`}
+        <Link href={`/job-details-v1/${_id}`}
           className={`job-duration fw-500 ${duration === "Part time" ? "part-time" : ""}`}
         >
           {duration}
         </Link>
       </div>
       <div>
-        <Link href={`/job-details-v1/${id}`} className="title fw-500 tran3s">
+        <Link href={`/job-details-v1/${_id}`} className="title fw-500 tran3s">
           {title}
         </Link>
       </div>
@@ -51,9 +51,9 @@ const JobGridItem = ({ item,style_2=true }: { item: IJobType;style_2?:boolean })
       </div>
       <div className="d-flex align-items-center justify-content-between mt-auto">
         <div className="job-location">
-          <Link href={`/job-details-v1/${id}`}>{location}</Link>
+          <Link href={`/job-details-v1/${_id}`}>{location}</Link>
         </div>
-        <Link href={`/job-details-v1/${id}`} className="apply-btn text-center tran3s">
+        <Link href={`/job-details-v1/${_id}`} className="apply-btn text-center tran3s">
           APPLY
         </Link>
       </div>
