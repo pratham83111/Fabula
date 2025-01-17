@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DashboardHeader from './dashboard-header';
 import JobAlertItem from './job-alert-item';
 import ShortSelect from '../../common/short-select';
+import { getAlljobs } from '@/redux/Api/JobApi';
 
 // props type 
 type IProps = {
   setIsOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>
 }
 const JobAlertArea = ({setIsOpenSidebar}:IProps) => {
+  const[allJobs,setAllJobs]=useState<any[]>([])
+
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const jobss = await getAlljobs();
+        console.log("CCC", jobss)
+        setAllJobs(jobss)
+        console.log("PPPPP", jobss)
+
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+      }
+    };
+    fetchJobs();
+  }, []);
   return (
     <div className="dashboard-body">
       <div className="position-relative">
@@ -36,13 +54,16 @@ const JobAlertArea = ({setIsOpenSidebar}:IProps) => {
                 </tr>
               </thead>
               <tbody className="border-0">
+                {
+                  allJobs.map((item,index)=>(
+                    <JobAlertItem title={item.title} location={item.location} duration='Fulltime' category={item.skillsAndExpertise} found='2' time='Weekly'/>
+                  ))
+                }
                 <JobAlertItem title='Product Designer' location='Yearly Salary . Germany' duration='Fulltime' category='Design, Product' found='2' time='Weekly' />
 
-                <JobAlertItem title='Marketing' location='Weekly Salary . United kingdom' duration='Part-Time' category='Account, Marketing' found='13' time='Monthly' />
 
                 <JobAlertItem title='Hotel Manager' location='Yearly Salary . Germany' duration='Fulltime' category='Design, Product' found='7' time='Daily' />
 
-                <JobAlertItem title='Developer' location='Monthly Salary . United States' duration='Fulltime' category='Account, Finance' found='3' time='Weekly' />
 
                 <JobAlertItem title='Account Manager' location='Hourly Salary . Spain' duration='Part-Time' category='Account, Finance' found='9' time='Monthly' />
 

@@ -60,9 +60,9 @@ const ListItemTwo = ({ item }: { item: IJobType }) => {
             </a>
             <Link
               href={`/tenders-details/${item._id}`}
-              className="apply-btn text-center tran3s"
+              className="bg-success p-2 rounded-4 text-center tran3s"
             >
-              APPLY
+              JOB_DETAILS
             </Link>
           </div>
         </div>

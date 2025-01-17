@@ -131,7 +131,7 @@ const JobGridV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
                 <div className={`accordion-box list-style ${jobType === "list" ? "show" : ""}`}>
                   {currentItems &&
                     currentItems.map((job) => (
-                      <ListItemTwo key={job.id} item={job} />
+                      <ListItemTwo key={job._id} item={job} />
                     ))}
                 </div>
 
@@ -139,7 +139,7 @@ const JobGridV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
                   <div className="row">
                     {currentItems &&
                       currentItems.map((job) => (
-                        <div key={job.id} className="col-lg-4 mb-30">
+                        <div key={job._id} className="col-lg-4 mb-30">
                           <JobGridItem item={job} />
                         </div>
                       ))}

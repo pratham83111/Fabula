@@ -1,13 +1,31 @@
-import React from "react";
-import job_data from "@/data/job-data";
+
+"use client"
+import React, { useEffect, useState } from "react";
+// import job_data from "@/data/job-data";
 import ListItem from "./list-item";
 import Link from "next/link";
+import { getAlljobs } from "@/redux/Api/JobApi";
 
 export function JobListItems({style_2=false}:{style_2?:boolean}) {
+const [job_data,setJob_Data] = useState<any[]>([])
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const jobss = await getAlljobs();
+        console.log("CCC", jobss)
+        setJob_Data(jobss)
+
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+      }
+    };
+    fetchJobs();
+  }, []);
+
   return (
     <>
       {job_data.slice(0, 5).map((item) => (
-        <ListItem key={item.id} item={item} style_2={style_2} />
+        <ListItem key={item._id} item={item} style_2={style_2} />
       ))}
     </>
   )

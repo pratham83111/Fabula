@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import job_data from "@/data/job-data";
 import icon_1 from "@/assets/dashboard/images/icon/icon_12.svg";
@@ -7,7 +7,9 @@ import icon_2 from "@/assets/dashboard/images/icon/icon_13.svg";
 import icon_3 from "@/assets/dashboard/images/icon/icon_14.svg";
 import icon_4 from "@/assets/dashboard/images/icon/icon_15.svg";
 import main_graph from "@/assets/dashboard/images/main-graph.png";
+import logo from "../../../../../public/assets/images/assets/img_04.jpg"
 import DashboardHeader from "./dashboard-header";
+import { getAlljobs } from "@/redux/Api/JobApi";
 
 // card item
 export function CardItem({
@@ -39,16 +41,29 @@ export function CardItem({
 type IProps = {
   setIsOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>
 }
-const DashboardArea = ({setIsOpenSidebar}:IProps) => {
-  const job_items = [...job_data.reverse().slice(0, 5)];
+const DashboardArea = ({ setIsOpenSidebar }: IProps) => {
+  // const job_items = [...job_data.reverse().slice(0, 5)];
+  const [job_items, SetJob_Items] = useState<any[]>([])
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const jobss = await getAlljobs();
+        console.log("CCC", jobss)
+        SetJob_Items(jobss)
+
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+      }
+    };
+    fetchJobs();
+  }, []);
+
 
   return (
     <div className="dashboard-body">
       <div className="position-relative">
-        {/* header start */}
         <DashboardHeader setIsOpenSidebar={setIsOpenSidebar} />
-        {/* header end */}
-
         <h2 className="main-title">Dashboard</h2>
         <div className="row">
           <CardItem img={icon_1} title="Total Visitor" value="1.7k+" />
@@ -74,26 +89,26 @@ const DashboardArea = ({setIsOpenSidebar}:IProps) => {
             <div className="recent-job-tab bg-white border-20 mt-30 w-100">
               <h4 className="dash-title-two">Recent Applied Contract</h4>
               <div className="wrapper">
-                {job_items.map((j) => (
+                {job_items.slice(0, 5).map((j) => (
                   <div
-                    key={j.id}
+                    key={j._id}
                     className="job-item-list d-flex align-items-center"
                   >
                     <div>
                       <Image
-                        src={j.logo}
+                        src={logo}
                         alt="logo"
                         width={40}
                         height={40}
-                        className="lazy-img logo"
+                        className="lazy-img logo rounded-circle"
                       />
                     </div>
                     <div className="job-title">
                       <h6 className="mb-5">
-                        <a href="#">{j.duration}</a>
+                        <a href="#">{j.jobType}</a>
                       </h6>
                       <div className="meta">
-                        <span>Fulltime</span> . <span>{j.location}</span>
+                        <span>{j.location}</span>
                       </div>
                     </div>
                     <div className="job-action">

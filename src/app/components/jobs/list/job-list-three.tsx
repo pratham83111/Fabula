@@ -44,44 +44,44 @@ const JobListThree = ({ itemsPerPage, grid_style = false }: { itemsPerPage: numb
     fetchJobs();
   }, []);
 
-  // useEffect(() => {
-  //   // Filter the job_data array based on the selected filters
-  //   let filteredData = all_jobs
-  //     .filter((item) => category.length !== 0 ? category.some((c) => item.category.includes(c)) : true)
-  //     .filter((item) =>
-  //       experience.length !== 0
-  //         ? experience.some((e) => item.experience.trim().toLowerCase() === e.trim().toLowerCase()) : true
-  //     )
-  //     .filter((item) => (job_type ? item.duration === job_type : true))
-  //     .filter((l) => location ? slugify(l.location.split(',').join('-').toLowerCase(),'-') === location : true)
-  //     .filter((item) => tags.length !== 0 ? tags.some((t) => item?.tags?.includes(t)) : true)
-  //     .filter((j) => j.salary >= priceValue[0] && j.salary <= priceValue[1]);
+  useEffect(() => {
+    // Filter the job_data array based on the selected filters
+    let filteredData = all_jobs
+      .filter((item) => category.length !== 0 ? category.some((c) => item.category.includes(c)) : true)
+      .filter((item) =>
+        experience.length !== 0
+          ? experience.some((e) => item.experience.trim().toLowerCase() === e.trim().toLowerCase()) : true
+      )
+      .filter((item) => (job_type ? item.duration === job_type : true))
+      .filter((l) => location ? slugify(l.location.split(',').join('-').toLowerCase(),'-') === location : true)
+      .filter((item) => tags.length !== 0 ? tags.some((t) => item?.tags?.includes(t)) : true)
+      .filter((j) => j.salary >= priceValue[0] && j.salary <= priceValue[1]);
 
-  //     if (shortValue === 'price-low-to-high') {
-  //       filteredData = filteredData.slice()
-  //         .sort((a, b) => Number(a.salary) - Number(b.salary))
-  //     }
+      if (shortValue === 'price-low-to-high') {
+        filteredData = filteredData.slice()
+          .sort((a, b) => Number(a.salary) - Number(b.salary))
+      }
 
-  //     if (shortValue === 'price-high-to-low') {
-  //       filteredData = filteredData.slice()
-  //         .sort((a, b) => Number(b.salary) - Number(a.salary));
-  //     }
-  //   const endOffset = itemOffset + itemsPerPage;
-  //   setFilterItems(filteredData)
-  //   setCurrentItems(filteredData.slice(itemOffset, endOffset));
-  //   setPageCount(Math.ceil(filteredData.length / itemsPerPage));
-  // }, [
-  //   itemOffset,
-  //   itemsPerPage,
-  //   category,
-  //   experience,
-  //   job_type,
-  //   location,
-  //   tags,
-  //   all_jobs,
-  //   priceValue,
-  //   shortValue
-  // ]);
+      if (shortValue === 'price-high-to-low') {
+        filteredData = filteredData.slice()
+          .sort((a, b) => Number(b.salary) - Number(a.salary));
+      }
+    const endOffset = itemOffset + itemsPerPage;
+    setFilterItems(filteredData)
+    setCurrentItems(filteredData.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(filteredData.length / itemsPerPage));
+  }, [
+    itemOffset,
+    itemsPerPage,
+    category,
+    experience,
+    job_type,
+    location,
+    tags,
+    all_jobs,
+    priceValue,
+    shortValue
+  ]);
 
 
   const handlePageClick = (event: { selected: number }) => {

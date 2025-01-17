@@ -12,6 +12,7 @@ const JobAlertItem = ({
   category,
   found,
   time,
+
 }: {
   title: string;
   duration: string;

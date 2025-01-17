@@ -8,9 +8,9 @@ import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { add_to_wishlist } from "@/redux/features/wishlist";
 
 const ListItemThree = ({ item }: { item: IJobType }) => {
-  const { id,logo, duration, salary, salary_duration, location, experience,title } = item || {};
+  const { _id,logo, duration, salary, salary_duration, location, experience,title } = item || {};
   const {wishlist} = useAppSelector(state => state.wishlist);
-  const isActive = wishlist.some(p => p.id === id);
+  const isActive = wishlist.some(p => p._id === _id);
   const dispatch = useAppDispatch();
   // handle add wishlist
   const handleAddWishlist = (item: IJobType) => {
@@ -26,11 +26,11 @@ const ListItemThree = ({ item }: { item: IJobType }) => {
           <i className="bi bi-bookmark-dash"></i>
         </a>
         <div className="list-header d-flex align-items-center">
-          <Link href={`/tenders-details/${id}`} className="logo">
+          <Link href={`/tenders-details/${_id}`} className="logo">
             <Image src={logo} alt="logo" className="lazy-img m-auto" width={50} height={50} />
           </Link>
           <div className="info-wrapper">
-            <Link href={`/tenders-details/${id}`} className="title fw-500 tran3s">
+            <Link href={`/tenders-details/${_id}`} className="title fw-500 tran3s">
              {title}
             </Link>
             <ul className="style-none d-flex flex-wrap info-data">
@@ -47,13 +47,13 @@ const ListItemThree = ({ item }: { item: IJobType }) => {
           <div className="d-flex align-items-center">
             <Image src={verify} alt="icon" />
             <span className="fw-500 client-status">Verified Client .</span>
-            <Link href={`/tenders-details/${id}`}
+            <Link href={`/tenders-details/${_id}`}
               className={`job-duration fw-500 ${duration === "Part time" ? "part-time" : ""}`}
             >
               {duration}
             </Link>
           </div>
-          <Link href={`/tenders-details/${id}`}
+          <Link href={`/tenders-details/${_id}`}
             className="apply-btn text-center tran3s xs-mt-20"
           >
             APPLY

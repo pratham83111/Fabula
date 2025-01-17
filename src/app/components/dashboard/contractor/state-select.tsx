@@ -13,7 +13,7 @@ const StateSelect = () => {
         { value: "Mumbai", label: "Mumbai" },
         { value: "Bangalore", label: "Bangalore" },
       ]}
-      defaultCurrent={0}
+      defaultCurrent={0}  
       onChange={(item) => handleState(item)}
       name="State"
     />

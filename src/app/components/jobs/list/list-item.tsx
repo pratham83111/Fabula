@@ -5,11 +5,11 @@ import Link from "next/link";
 import { IJobType } from "@/types/job-data-type";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { add_to_wishlist } from "@/redux/features/wishlist";
-
+import logo from "../../../../../public/assets/images/assets/ogg.png"
 const ListItem = ({ item,style_2,cls='' }: { item: IJobType;style_2?:boolean;cls?:string }) => {
-  const { id,category, company, date, duration, location, logo, title } = item;
+  const { _id,category,overview, date, duration,created_at, location, title } = item;
   const {wishlist} = useAppSelector(state => state.wishlist);
-  const isActive = wishlist.some(p => p.id === id);
+  const isActive = wishlist.some(p => p._id === _id);
   const dispatch = useAppDispatch();
   // handle add wishlist
   const handleAddWishlist = (item: IJobType) => {
@@ -20,36 +20,36 @@ const ListItem = ({ item,style_2,cls='' }: { item: IJobType;style_2?:boolean;cls
       <div className="row justify-content-between align-items-center">
         <div className="col-xxl-3 col-lg-4">
           <div className="job-title d-flex align-items-center">
-            <Link href={`/job-details-v1/${id}`} className="logo">
-              <Image src={logo} alt="logo" className="lazy-img m-auto" />
+            <Link href={`/job-details-v1/${_id}`} className="logo">
+              <Image src={logo} alt="logo" className="lazy-img m-auto rounded-circle" width={40} height={40}/>
             </Link>
-            <Link href={`/job-details-v1/${id}`} className="title fw-500 tran3s">
-              {title}
+            <Link href={`/job-details-v1/${_id}`} className="title fw-500 tran3s">
+              {overview.slice(0, 30) + " ...."}
             </Link>
           </div>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-6 ms-auto">
-          <Link href={`/job-details-v1/${id}`}
+          <Link href={`/job-details-v1/${_id}`}
             className={`job-duration fw-500 ${duration === "Part time" ? "part-time" : ""}`}
           >
             {duration}
           </Link>
           <div className="job-date">
-            {date} by <Link href={`/job-details-v1/${id}`}>{company}</Link>
+            {new Date(created_at).toLocaleDateString()} by <Link href={`/job-details-v1/${_id}`}>{title}</Link>
           </div>
         </div>
         <div className="col-xxl-2 col-lg-3 col-md-4 col-sm-6 ms-auto xs-mt-10">
           <div className="job-location">
-            <Link href={`/job-details-v1/${id}`}>{location}</Link>
+            <Link href={`/job-details-v1/${_id}`}>{location}</Link>
           </div>
-          <div className="job-category">
+          {/* <div className="job-category">
             {category.map((c, i) => (
               <a key={i} href="#">
                 {c}
                 {i < category.length - 1 && ", "}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
         <div className="col-lg-2 col-md-4">
           <div className="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
@@ -59,7 +59,7 @@ const ListItem = ({ item,style_2,cls='' }: { item: IJobType;style_2?:boolean;cls
             >
               <i className="bi bi-bookmark-dash"></i>
             </a>
-            <Link href={`/job-details-v1/${id}`}
+            <Link href={`/job-details-v1/${_id}`}
               className="apply-btn text-center tran3s"
             >
               APPLY
