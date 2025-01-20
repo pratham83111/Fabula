@@ -56,16 +56,16 @@ const JobAlertArea = ({setIsOpenSidebar}:IProps) => {
               <tbody className="border-0">
                 {
                   allJobs.map((item,index)=>(
-                    <JobAlertItem title={item.title} location={item.location} duration='Fulltime' category={item.skillsAndExpertise} found='2' time='Weekly'/>
+                    <JobAlertItem item={item} title={item.title} location={item.location} duration='Fulltime' category={item.skillsAndExpertise} found='2' time='Weekly'/>
                   ))
                 }
-                <JobAlertItem title='Product Designer' location='Yearly Salary . Germany' duration='Fulltime' category='Design, Product' found='2' time='Weekly' />
+                {/* <JobAlertItem title='Product Designer' location='Yearly Salary . Germany' duration='Fulltime' category='Design, Product' found='2' time='Weekly' />
 
 
                 <JobAlertItem title='Hotel Manager' location='Yearly Salary . Germany' duration='Fulltime' category='Design, Product' found='7' time='Daily' />
 
 
-                <JobAlertItem title='Account Manager' location='Hourly Salary . Spain' duration='Part-Time' category='Account, Finance' found='9' time='Monthly' />
+                <JobAlertItem title='Account Manager' location='Hourly Salary . Spain' duration='Part-Time' category='Account, Finance' found='9' time='Monthly' /> */}
 
               </tbody>
             </table>

@@ -95,6 +95,7 @@ const nav_data: {
     link: "/contractor/setting",
     title: "Account Settings",
   },
+  
 ];
 // props type 
 type IProps = {
