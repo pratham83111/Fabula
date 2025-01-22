@@ -136,7 +136,7 @@ const JobListV2Area = ({ itemsPerPage,grid_style=false }: { itemsPerPage: number
                 >
                   {currentItems &&
                     currentItems.map((job) => (
-                      <ListItemTwo key={job.id} item={job} />
+                      <ListItemTwo key={job._id} item={job} />
                     ))}
                 </div>
 
@@ -146,7 +146,7 @@ const JobListV2Area = ({ itemsPerPage,grid_style=false }: { itemsPerPage: number
                   <div className="row">
                     {currentItems &&
                       currentItems.map((job) => (
-                        <div key={job.id} className="col-sm-6 mb-30">
+                        <div key={job._id} className="col-sm-6 mb-30">
                           <JobGridItem item={job} />
                         </div>
                       ))}

@@ -112,7 +112,7 @@ const JobListV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
 
                   {currentItems &&
                     currentItems.map((job) => (
-                      <div key={job.id} className="col-lg-6 mb-30">
+                      <div key={job._id} className="col-lg-6 mb-30">
                         <ListItemThree item={job} />
                       </div>
                     ))}
