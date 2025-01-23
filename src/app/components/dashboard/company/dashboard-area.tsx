@@ -75,7 +75,7 @@ const EmployDashboardArea = ({setIsOpenSidebar}:IProps) => {
               <div className="wrapper">
                 {job_items.map((j) => (
                   <div
-                    key={j.id}
+                    key={j._id}
                     className="job-item-list d-flex align-items-center"
                   >
                     <div>
