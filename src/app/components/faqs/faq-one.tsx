@@ -12,33 +12,33 @@ const faq_data: {
 }[] = [
     {
       id: "One",
-      title: "How does the free trial work?",
-      desc: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      title: "What services do you offer as a contractor?",
+      desc: "We provide a wide range of contracting services, including construction, renovation, and project management, tailored to meet client needs.",
       isShow: true,
       parent: "accordionTwo",
     },
     {
       id: "Two",
-      title: "How do you find different criteria in your process?",
-      desc: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      title: "How do you ensure project deadlines are met?",
+      desc: "We follow a structured project timeline and utilize advanced tools to monitor progress, ensuring that deadlines are met without compromising quality.",
       parent: "accordionTwo",
     },
     {
       id: "Three",
-      title: "What do you look for in a founding team?",
-      desc: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      title: "What qualifications do your contractors have?",
+      desc: "Our team consists of licensed and experienced professionals who are skilled in various aspects of contracting, ensuring top-notch service delivery.",
       parent: "accordionTwo",
     },
     {
       id: "Four",
-      title: "Do you recommend Pay as you go or Pre pay?",
-      desc: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      title: "How do you handle project cost estimation?",
+      desc: "We provide detailed cost breakdowns during the planning phase, ensuring transparency and accurate budgeting for every project.",
       parent: "accordionTwo",
     },
     {
       id: "Five",
-      title: "What do I get for $0 with my plan?",
-      desc: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      title: "What is your process for handling client feedback?",
+      desc: "We prioritize client satisfaction by maintaining open communication channels and promptly addressing feedback to improve our services.",
       parent: "accordionTwo",
     },
   ];
@@ -65,7 +65,7 @@ const FaqOne = () => {
       <section className="faq-section position-relative mt-180 xl-mt-150 lg-mt-100 mb-150 lg-mb-100">
         <div className="container">
           <div className="title-one text-center">
-            <h2 className="text-dark wow fadeInUp" data-wow-delay="0.3s">Questions & Answers</h2>
+            <h2 className="text-dark wow fadeInUp" data-wow-delay="0.3s">Contractor FAQs</h2>
           </div>
           <div className="bg-wrapper mt-60 lg-mt-40">
             <FaqItems/>

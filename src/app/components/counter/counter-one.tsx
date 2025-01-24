@@ -38,7 +38,7 @@ const CounterOne = ({
   return (
     <>
       {counter_data.map((c) => (
-        <div key={c.id} className="col-sm-4">
+        <div key={c.id} className="col-sm-4 mt-45">
           <div
             className={`${
               style_2 ? "counter-block-two mt-15" : "counter-block-one mt-25"

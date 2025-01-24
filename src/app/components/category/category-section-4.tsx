@@ -14,7 +14,9 @@ const CategorySectionFour = ({style_2=false}: { style_2?: boolean }) => {
           <div className="row justify-content-between align-items-center">
             <div className="col-lg-8">
               <div className="title-three">
-                <h2 className={` wow fadeInUp fw-600 ${style_2 ? 'text-dark' : 'color-blue'}`} data-wow-delay="0.3s">{style_2 ? 'Most Demanding Categories.' : 'Explore the marketplace.'}</h2>
+                <h2 className={` wow fadeInUp fw-600 ${style_2 ? 'text-dark' : 'color-blue'}`} data-wow-delay="0.3s">
+                  {style_2 ? 'Most Demanding Contractor Roles.' : 'Explore Contractor Opportunities.'}
+                </h2>
               </div>
             </div>
             <div className="col-lg-4">
@@ -22,7 +24,7 @@ const CategorySectionFour = ({style_2=false}: { style_2?: boolean }) => {
                 <Link href="/job-grid-v2"
                   className="btn-six d-none d-lg-inline-block"
                 >
-                  Explore all fields
+                  Explore all contractor fields
                 </Link>
               </div>
             </div>
@@ -41,14 +43,14 @@ const CategorySectionFour = ({style_2=false}: { style_2?: boolean }) => {
                     <Image src={item.icon} alt="icon" className="lazy-img" />
                   </div>
                   <div className="title fw-500">{item.title}</div>
-                  <div className="total-job">{item.count} Jobs</div>
+                  <div className="total-job">{item.count} Contractor Jobs</div>
                 </Link>
               </div>
             ))}
           </div>
           <div className="text-center mt-40 d-lg-none">
             <Link href="/job-grid-v2" className="btn-six">
-              Explore all fields
+              Explore all contractor fields
             </Link>
           </div>
         </div>

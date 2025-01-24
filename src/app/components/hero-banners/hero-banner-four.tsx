@@ -9,13 +9,14 @@ import JobLocationSelect from '../select/job-location';
 import JobCategorySelect from '../select/job-category';
 import useSearchFormSubmit from '@/hooks/use-search-form-submit';
 
-
 const HeroBannerFour = () => {
-  const { handleSubmit, setLocationVal, setCategoryVal,setSearchText } = useSearchFormSubmit();
-   // handleSearchInput
-   const handleSearchInput = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const { handleSubmit, setLocationVal, setCategoryVal, setSearchText } = useSearchFormSubmit();
+
+  // handleSearchInput
+  const handleSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value)
   }
+
   return (
     <>
       <div className="hero-banner-four position-relative pt-170 lg-pt-150 pb-300 lg-pb-150 md-pb-100">
@@ -23,8 +24,8 @@ const HeroBannerFour = () => {
           <div className="position-relative pb-70 sm-pb-20">
             <div className="row">
               <div className="col-xxl-7 col-lg-8 m-auto text-center">
-                <h1 className="wow fadeInUp" data-wow-delay="0.3s">Find your job without any hassle.</h1>
-                <p className="text-md mt-25 mb-45 md-mb-30 wow fadeInUp" data-wow-delay="0.4s">Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
+                <h1 className="wow fadeInUp " data-wow-delay="0.3s">Find your next contracting opportunity easily.</h1>
+                <p className="text-md mt-25 mb-45 md-mb-30 wow fadeInUp" data-wow-delay="0.4s">Contractor jobs & projects. Find opportunities globally. Executive contracting roles & work.</p>
               </div>
             </div>
             <div className="position-relative">
@@ -35,7 +36,7 @@ const HeroBannerFour = () => {
                       <div className="row align-items-center">
                         <div className="col-md-3">
                           <div className="input-box">
-                            <div className="label">Job Categories</div>
+                            <div className="label">Contract Categories</div>
                             <JobCategorySelect setCategoryVal={setCategoryVal} />
                           </div>
                         </div>
@@ -47,8 +48,8 @@ const HeroBannerFour = () => {
                         </div>
                         <div className="col-md-3">
                           <div className="input-box border-left">
-                            <div className="label">Keywords or Title</div>
-                            <input onChange={handleSearchInput} type="text" placeholder="Design, branding" className="keyword" />
+                            <div className="label">Keywords or Role</div>
+                            <input onChange={handleSearchInput} type="text" placeholder="Construction, eng..." className="keyword" />
                           </div>
                         </div>
                         <div className="col-md-3 sm-mb-10 sm-mt-10">
@@ -56,12 +57,12 @@ const HeroBannerFour = () => {
                         </div>
                       </div>
                     </form>
-                    <div className="upload-btn position-relative d-flex align-items-center justify-content-between">
+                    {/* <div className="upload-btn position-relative d-flex align-items-center justify-content-between">
                       <span className="fw-500 text-dark me-1">Upload your CV</span> <i
                         className="bi bi-file-earmark-arrow-up"></i>
                       <input type="file" id="uploadCV" name="uploadCV"
                         accept=".doc,.docx,.pdf,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
