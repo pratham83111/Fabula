@@ -4,7 +4,7 @@ import cate_icon_3 from '@/assets/images/icon/icon_65.svg';
 import cate_icon_4 from '@/assets/images/icon/icon_68.svg';
 import cate_icon_5 from '@/assets/images/icon/icon_66.svg';
 import cate_icon_6 from '@/assets/images/icon/icon_67.svg';
-import type { category_dropdown as CategoryDropdownType } from '@/types/category-type'; 
+import type { category_dropdown as CategoryDropdownType } from '@/types/category-type';
 
 const category_dropdown: CategoryDropdownType[] = [
   {
@@ -13,21 +13,21 @@ const category_dropdown: CategoryDropdownType[] = [
       {
         id: 1,
         icon: cate_icon_1,
-        title: 'UI/UX Design Contractors',
+        title: 'Experienced Contractors',
         count: '12k+',
         bg_clr: '#EAFBFD',
       },
       {
         id: 2,
         icon: cate_icon_2,
-        title: 'Development Contractors',
+        title: 'Reliable Contractors',
         count: '7k+',
         bg_clr: '#FFFAEC',
       },
       {
         id: 3,
         icon: cate_icon_3,
-        title: 'Telemarketing Contractors',
+        title: 'Licensed Contractors',
         count: '310k+',
         bg_clr: '#FFEBFB',
       },
@@ -39,21 +39,21 @@ const category_dropdown: CategoryDropdownType[] = [
       {
         id: 4,
         icon: cate_icon_4,
-        title: 'Marketing Contractors',
+        title: 'Affordable Contractors',
         count: '420k+',
         bg_clr: '#E8F7E9',
       },
       {
         id: 5,
         icon: cate_icon_5,
-        title: 'Editing Contractors',
+        title: 'Service Contractors',
         count: '3k+',
         bg_clr: '#F7F5FF',
       },
       {
         id: 6,
         icon: cate_icon_6,
-        title: 'Accounting Contractors',
+        title: 'Trade Contractors ',
         count: '150k+',
         bg_clr: '#FFF3EA',
       },
