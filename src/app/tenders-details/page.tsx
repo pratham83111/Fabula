@@ -28,7 +28,7 @@ const JobDetailsV1Page = () => {
         {/* job details breadcrumb end */}
 
         {/* job details area start */}
-        <JobDetailsV1Area job={job}/>
+        <JobDetailsV1Area tender={job}/>
         {/* job details area end */}
 
         {/* related job start */}

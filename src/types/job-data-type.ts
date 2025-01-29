@@ -67,3 +67,25 @@ export interface JobState {
   loading: boolean;  // Loading state for async operations
   error: string | null;  // Error message in case of a failed API call
 }
+
+export interface ContractorTender {
+  id: number;
+  logo: StaticImageData;
+  title: string;
+  duration: string;
+  date: string;
+  company: string;
+  location: string;
+  category: string[];
+  experience: string;
+  salary: number;
+  salary_duration: string;
+  tags: string[];
+  english_fluency: string;
+  overview: string;
+  created_at: string;
+  description: string;  // New field
+  responsibilities: string;  // New field
+  benefits: string;  // New field
+  tenderType: string;  // New field
+}

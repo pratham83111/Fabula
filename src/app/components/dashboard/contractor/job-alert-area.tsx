@@ -3,6 +3,7 @@ import DashboardHeader from './dashboard-header';
 import JobAlertItem from './job-alert-item';
 import ShortSelect from '../../common/short-select';
 import { getAlljobs } from '@/redux/Api/JobApi';
+import contractorTenders from '@/data/job-data';
 
 // props type 
 type IProps = {
@@ -13,18 +14,13 @@ const JobAlertArea = ({setIsOpenSidebar}:IProps) => {
 
 
   useEffect(() => {
-    const fetchJobs = async () => {
       try {
-        const jobss = await getAlljobs();
-        console.log("CCC", jobss)
-        setAllJobs(jobss)
-        console.log("PPPPP", jobss)
+        setAllJobs(contractorTenders)
 
       } catch (error) {
         console.error("Error fetching jobs:", error);
       }
-    };
-    fetchJobs();
+
   }, []);
   return (
     <div className="dashboard-body">
@@ -48,15 +44,15 @@ const JobAlertArea = ({setIsOpenSidebar}:IProps) => {
                 <tr>
                   <th scope="col">Title</th>
                   <th scope="col">Alert </th>
-                  <th scope="col">Job</th>
+                  <th scope="col">Contracter</th>
                   <th scope="col">Time</th>
                   <th scope="col">Actions</th>
                 </tr>
               </thead>
               <tbody className="border-0">
                 {
-                  allJobs.map((item,index)=>(
-                    <JobAlertItem item={item} title={item.title} location={item.location} duration='Fulltime' category={item.skillsAndExpertise} found='2' time='Weekly'/>
+                  allJobs.slice(0,5).map((item,index)=>(
+                    <JobAlertItem item={item} title={item.title} location={item.location} duration='Fulltime' category={item.overview} found='2' time='Weekly'/>
                   ))
                 }
                 {/* <JobAlertItem title='Product Designer' location='Yearly Salary . Germany' duration='Fulltime' category='Design, Product' found='2' time='Weekly' />

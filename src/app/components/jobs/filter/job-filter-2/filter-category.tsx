@@ -4,11 +4,12 @@ import job_data from "@/data/job-data";
 import NiceSelect from "@/ui/nice-select";
 import { useAppDispatch } from "@/redux/hook";
 import { setCategory } from "@/redux/features/filterSlice";
+import contractorTenders from "@/data/job-data";
 
 const FilterCategory = () => {
   const dispatch = useAppDispatch()
   const uniqueCategories = [
-    ...new Set(job_data.flatMap((job) => job.category)),
+    ...new Set(contractorTenders.flatMap((job) => job.category)),
   ];
   const options = uniqueCategories.map((c) => {
     return { value: slugify(c, "-"), label: c };

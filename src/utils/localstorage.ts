@@ -1,6 +1,6 @@
-import { IJobType } from "@/types/job-data-type";
+import { ContractorTender, IJobType } from "@/types/job-data-type";
 
-export const setLocalStorage = (name:string, items:IJobType[]) => {
+export const setLocalStorage = (name:string, items:ContractorTender[]) => {
   if (typeof window !== "undefined") {
     localStorage.setItem(name, JSON.stringify(items));
   }

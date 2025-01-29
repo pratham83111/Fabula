@@ -53,7 +53,7 @@ const RelatedJobs = ({category}:{category:string[]}) => {
 
           <Slider {...slider_setting} ref={sliderRef} className="related-job-slider">
             {job_items.map((j) => (
-              <div key={j._id} className="item">
+              <div key={j.id} className="item">
                 <JobGridItem item={j} />
               </div>
             ))}

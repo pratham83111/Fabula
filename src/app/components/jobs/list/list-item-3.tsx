@@ -3,17 +3,17 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import verify from "@/assets/images/icon/icon_51.svg";
-import { IJobType } from "@/types/job-data-type";
+import { ContractorTender, IJobType } from "@/types/job-data-type";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { add_to_wishlist } from "@/redux/features/wishlist";
 
-const ListItemThree = ({ item }: { item: IJobType }) => {
-  const { _id,logo, duration, salary, salary_duration, location, experience,title } = item || {};
+const ListItemThree = ({ item }: { item: ContractorTender }) => {
+  const { id,logo, duration, salary, salary_duration, location, experience,title } = item || {};
   const {wishlist} = useAppSelector(state => state.wishlist);
-  const isActive = wishlist.some(p => p._id === _id);
+  const isActive = wishlist.some(p => p.id === id);
   const dispatch = useAppDispatch();
   // handle add wishlist
-  const handleAddWishlist = (item: IJobType) => {
+  const handleAddWishlist = (item: ContractorTender) => {
     dispatch(add_to_wishlist(item));
   };
   return (
@@ -26,11 +26,11 @@ const ListItemThree = ({ item }: { item: IJobType }) => {
           <i className="bi bi-bookmark-dash"></i>
         </a>
         <div className="list-header d-flex align-items-center">
-          <Link href={`/tenders-details/${_id}`} className="logo">
+          <Link href={`/tenders-details/${id}`} className="logo">
             <Image src={logo} alt="logo" className="lazy-img m-auto" width={50} height={50} />
           </Link>
           <div className="info-wrapper">
-            <Link href={`/tenders-details/${_id}`} className="title fw-500 tran3s">
+            <Link href={`/tenders-details/${id}`} className="title fw-500 tran3s">
              {title}
             </Link>
             <ul className="style-none d-flex flex-wrap info-data">
@@ -47,13 +47,13 @@ const ListItemThree = ({ item }: { item: IJobType }) => {
           <div className="d-flex align-items-center">
             <Image src={verify} alt="icon" />
             <span className="fw-500 client-status">Verified Client .</span>
-            <Link href={`/tenders-details/${_id}`}
+            <Link href={`/tenders-details/${id}`}
               className={`job-duration fw-500 ${duration === "Part time" ? "part-time" : ""}`}
             >
               {duration}
             </Link>
           </div>
-          <Link href={`/tenders-details/${_id}`}
+          <Link href={`/tenders-details/${id}`}
             className="apply-btn text-center tran3s xs-mt-20"
           >
             APPLY

@@ -49,8 +49,8 @@ const JobListV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
     }
 
     const endOffset = itemOffset + itemsPerPage;
-    setFilterItems(filteredData)
-    setCurrentItems(filteredData.slice(itemOffset, endOffset));
+    // setFilterItems(filteredData)
+    // setCurrentItems(filteredData.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(filteredData.length / itemsPerPage));
   }, [
     itemOffset,
@@ -112,8 +112,8 @@ const JobListV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
 
                   {currentItems &&
                     currentItems.map((job) => (
-                      <div key={job._id} className="col-lg-6 mb-30">
-                        <ListItemThree item={job} />
+                      <div key={job.id} className="col-lg-6 mb-30">
+                        {/* <ListItemThree item={job} /> */}
                       </div>
                     ))}
                 </div>

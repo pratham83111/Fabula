@@ -5,21 +5,19 @@ import React, { useEffect, useState } from "react";
 import ListItem from "./list-item";
 import Link from "next/link";
 import { getAlljobs } from "@/redux/Api/JobApi";
+import contractorTenders from "@/data/job-data";
 
 export function JobListItems({style_2=false}:{style_2?:boolean}) {
 const [job_data,setJob_Data] = useState<any[]>([])
   useEffect(() => {
-    const fetchJobs = async () => {
       try {
-        const jobss = await getAlljobs();
-        console.log("CCC", jobss)
-        setJob_Data(jobss)
+        console.log("CCC", contractorTenders)
+        setJob_Data(contractorTenders)
 
       } catch (error) {
         console.error("Error fetching jobs:", error);
       }
-    };
-    fetchJobs();
+   
   }, []);
 
   return (
@@ -48,7 +46,7 @@ const JobListOne = () => {
                   href="/job-list-v1"
                   className="btn-six d-none d-lg-inline-block"
                 >
-                  Explore all jobs
+                  Explore all Contractor
                 </Link>
               </div>
             </div>

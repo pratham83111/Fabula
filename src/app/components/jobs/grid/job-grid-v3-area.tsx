@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import slugify from "slugify";
 import job_data from "@/data/job-data";
-import { IJobType } from "@/types/job-data-type";
+import { ContractorTender, IJobType } from "@/types/job-data-type";
 import Pagination from "@/ui/pagination";
 import JobGridItem from "../grid/job-grid-item";
 import { useAppSelector } from "@/redux/hook";
@@ -18,8 +18,8 @@ const JobGridV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
   const { category, experience, job_type, location, english_fluency, search_key } = useAppSelector(
     (state) => state.filter
   );
-  const [currentItems, setCurrentItems] = useState<IJobType[] | null>(null);
-  const [filterItems, setFilterItems] = useState<IJobType[]>([]);
+  const [currentItems, setCurrentItems] = useState<ContractorTender[] | null>(null);
+  const [filterItems, setFilterItems] = useState<ContractorTender[]>([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const [jobType, setJobType] = useState("grid");
@@ -131,7 +131,7 @@ const JobGridV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
                 <div className={`accordion-box list-style ${jobType === "list" ? "show" : ""}`}>
                   {currentItems &&
                     currentItems.map((job) => (
-                      <ListItemTwo key={job._id} item={job} />
+                      <ListItemTwo key={job.id} item={job} />
                     ))}
                 </div>
 
@@ -139,7 +139,7 @@ const JobGridV3Area = ({ itemsPerPage }: { itemsPerPage: number }) => {
                   <div className="row">
                     {currentItems &&
                       currentItems.map((job) => (
-                        <div key={job._id} className="col-lg-4 mb-30">
+                        <div key={job.id} className="col-lg-4 mb-30">
                           <JobGridItem item={job} />
                         </div>
                       ))}

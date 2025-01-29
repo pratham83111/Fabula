@@ -8,6 +8,11 @@ import JobTags from './job-tags';
 import JobPrices from './job-prices';
 import { useAppDispatch } from '@/redux/hook';
 import { resetFilter } from '@/redux/features/filterSlice';
+import TenderLocations from './tender-location';
+import TenderType from './tender-type';
+import TenderExperience from './tender-experience';
+import TenderCategory from './tender-category';
+import TanderTags from './tender.tag';
 
 // prop type 
 type IProps = {
@@ -31,22 +36,22 @@ const FilterArea = ({priceValue,setPriceValue,maxPrice}:IProps) => {
           <a className="filter-title fw-500 text-dark" data-bs-toggle="collapse" href="#collapseLocation" role="button" aria-expanded="false">Location</a>
           <div className="collapse show" id="collapseLocation">
             <div className="main-body">
-              <JobLocations/>
+              <TenderLocations/>
             </div>
           </div>
         </div>
         {/* <!-- /.filter-block --> */}
         <div className="filter-block bottom-line pb-25 mt-25">
-          <a className="filter-title fw-500 text-dark" data-bs-toggle="collapse" href="#collapseJobType" role="button" aria-expanded="false">Job Type</a>
+          <a className="filter-title fw-500 text-dark" data-bs-toggle="collapse" href="#collapseJobType" role="button" aria-expanded="false">Tender Type</a>
           <div className="collapse show" id="collapseJobType">
-            <JobType/>
+            <TenderType/>
           </div> 
         </div>
         {/* <!-- /.filter-block --> */}
         <div className="filter-block bottom-line pb-25 mt-25">
           <a className="filter-title fw-500 text-dark" data-bs-toggle="collapse" href="#collapseExp" role="button" aria-expanded="false">Experience</a>
           <div className="collapse show" id="collapseExp">
-            <JobExperience/>
+            <TenderExperience/>
           </div>
         </div>
         {/* <!-- /.filter-block --> */}
@@ -60,14 +65,14 @@ const FilterArea = ({priceValue,setPriceValue,maxPrice}:IProps) => {
         <div className="filter-block bottom-line pb-25 mt-25">
           <a className="filter-title fw-500 text-dark collapsed" data-bs-toggle="collapse" href="#collapseCategory" role="button" aria-expanded="false">Category</a>
           <div className="collapse" id="collapseCategory">
-            <JobCategory/>
+            <TenderCategory/>
           </div>
         </div>
         {/* <!-- /.filter-block --> */}
         <div className="filter-block bottom-line pb-25 mt-25">
           <a className="filter-title fw-500 text-dark collapsed" data-bs-toggle="collapse" href="#collapseTag" role="button" aria-expanded="false">Tags</a>
           <div className="collapse" id="collapseTag">
-            <JobTags/>
+            <TanderTags/>
           </div>
         </div>
         {/* <!-- /.filter-block --> */}

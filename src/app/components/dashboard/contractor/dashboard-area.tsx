@@ -10,6 +10,7 @@ import main_graph from "@/assets/dashboard/images/main-graph.png";
 import logo from "../../../../../public/assets/images/assets/img_04.jpg"
 import DashboardHeader from "./dashboard-header";
 import { getAlljobs } from "@/redux/Api/JobApi";
+import contractorTenders from "@/data/job-data";
 
 // card item
 export function CardItem({
@@ -46,17 +47,15 @@ const DashboardArea = ({ setIsOpenSidebar }: IProps) => {
   const [job_items, SetJob_Items] = useState<any[]>([])
 
   useEffect(() => {
-    const fetchJobs = async () => {
+    
       try {
-        const jobss = await getAlljobs();
-        console.log("CCC", jobss)
-        SetJob_Items(jobss)
+       
+        SetJob_Items(contractorTenders)
 
       } catch (error) {
         console.error("Error fetching jobs:", error);
       }
-    };
-    fetchJobs();
+  
   }, []);
 
 
@@ -105,7 +104,7 @@ const DashboardArea = ({ setIsOpenSidebar }: IProps) => {
                     </div>
                     <div className="job-title">
                       <h6 className="mb-5">
-                        <a href="#">{j.jobType}</a>
+                        <a href="#">{j.tenderType}</a>
                       </h6>
                       <div className="meta">
                         <span>{j.location}</span>
