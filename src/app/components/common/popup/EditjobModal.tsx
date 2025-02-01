@@ -11,14 +11,28 @@ const EditModal = ({
     isOpen: boolean;
     onClose: () => void;
     initialData: {
-
+        item:any,
         title: string;
         duration: string;
+        date: string;
+        company: string;
         location: string;
-        category: string;
+        category: string[];
+        experience: string;
+        salary: number;
+        salary_duration: string;
+        tags: string[];
+        english_fluency: string;
+        overview: string;
+        description: string;
+        responsibilities: string;
+        benefits: string;
+        tenderType: string;
+        created_at: string;
         found: string;
         time: string;
-    };
+    }
+
     onSave: any;
 }) => {
     const [formData, setFormData] = useState(initialData);
@@ -35,11 +49,11 @@ const EditModal = ({
     if (!isOpen) return null;
 
     return (
-        <div className="modal shadow-lg show d-block rounded-2" tabIndex={-1} role="dialog">
-            <div className="modal-dialog modal-lg" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h5 className="modal-title text-center">Edit Job Details</h5>
+        <div className="modal fade show d-block rounded-3 p-4 ms-4 mt-10" tabIndex={-1} role="dialog">
+            <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div className="modal-content shadow-lg border-0 rounded-3">
+                    <div className="modal-header bg-success text-white">
+                        <h5 className="modal-title text-center">Edit Tender Details</h5>
                         <button type="button" className="btn-close" onClick={onClose}></button>
                     </div>
                     <div className="modal-body shadow-lg">
@@ -60,7 +74,7 @@ const EditModal = ({
                                     type="text"
                                     className="form-control"
                                     name="duration"
-                                    value={item.jobType}
+                                    value={item.duration}
                                     onChange={handleChange}
                                 />
                             </div>
@@ -84,83 +98,110 @@ const EditModal = ({
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="mb-3">
-                                <label className="form-label">JobDescription</label>
-                                <textarea
-                                    className="form-control"
-                                    name="jobDescription"
-                                    value={item.jobDescription}
-                                    onChange={handleChange}
-                                    rows={5}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label className="form-label">RequiredSkills</label>
+                           
 
-                                <textarea
-                                    className="form-control"
-                                    name="jobDescription"
-                                    value={item.requiredSkills}
-                                    onChange={handleChange}
-                                    rows={5}
-                                />
-
-                            </div>
-
-                            <div className="mb-3">
-                                <label className="form-label">Responsibilities</label>
-
-                                <textarea
-                                    className="form-control"
-                                    name="jobDescription"
-                                    value={item.responsibilities}
-                                    onChange={handleChange}
-                                    rows={4}
-                                />
-                            </div>
-
-                            <div className="mb-3">
-                                <label className="form-label">SkillsAndExpertise</label>
-
-
-                                <textarea
-                                    className="form-control"
-                                    name="jobDescription"
-                                    value={item.skillsAndExpertise}
-                                    onChange={handleChange}
-                                    rows={4}
-                                />
-                            </div>
-
+                            
+                           
+                            
                             <div className="mb-3">
                                 <label className="form-label">Benefits</label>
-
                                 <textarea
                                     className="form-control"
-                                    name="jobDescription"
+                                    name="benefits"
                                     value={item.benefits}
                                     onChange={handleChange}
                                     rows={4}
                                 />
                             </div>
 
+
+
+                          
+
                             <div className="mb-3">
-                                <label className="form-label">Jobs Found</label>
+                                <label className="form-label">Company</label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    name="found"
-                                    value={formData.found}
+                                    name="company"
+                                    value={item.company}
                                     onChange={handleChange}
                                 />
                             </div>
+
                             <div className="mb-3">
-                                <label className="form-label">Time</label>
+                                <label className="form-label">Experience</label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    name="time"
-                                    value={formData.time}
+                                    name="experience"
+                                    value={item.experience}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label className="form-label">Salary</label>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    name="salary"
+                                    value={item.salary}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label className="form-label">Salary Duration</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="salary_duration"
+                                    value={item.salary_duration}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label className="form-label">Tags</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="tags"
+                                    value={item.tags}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label className="form-label">English Fluency</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="english_fluency"
+                                    value={item.english_fluency}
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label className="form-label">Overview</label>
+                                <textarea
+                                    className="form-control"
+                                    name="overview"
+                                    value={item.overview}
+                                    onChange={handleChange}
+                                    rows={3}
+                                />
+                            </div>
+
+                            <div className="mb-3">
+                                <label className="form-label">Created At</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="created_at"
+                                    value={item.created_at}
                                     onChange={handleChange}
                                 />
                             </div>
@@ -177,6 +218,7 @@ const EditModal = ({
                 </div>
             </div>
         </div>
+
     );
 };
 

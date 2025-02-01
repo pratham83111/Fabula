@@ -9,8 +9,8 @@ const ShortSelect = () => {
     <NiceSelect
       options={[
         { value: "New", label: "New" },
-        { value: "Category", label: "Category" },
-        { value: "Job Type", label: "Job Type" },
+        { value: "Category", label: "category" },
+        { value: "TenderType", label: "tenderType" },
       ]}
       defaultCurrent={0}
       onChange={(item) => handleShort(item)}

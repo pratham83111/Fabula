@@ -27,14 +27,27 @@ const JobAlertItem = ({
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false); // For delete confirmation modal
   const [jobDetails, setJobDetails] = useState({
     item,
-    title,
-    duration,
-    location,
-    category,
-    found,
-    time,
+    title: '',
+    duration: '',
+    date: '',
+    company: '',
+    location: '',
+    category: [], 
+    experience: '',
+    salary: 0,
+    salary_duration: '',
+    tags: [],
+    english_fluency: '',
+    overview: '',
+    created_at: '',
+    description: '',
+    responsibilities: '',
+    tenderType: '',
+    time: '',
+    benefits: '',
+    found: '',
   });
-
+  
   const handleEditClick = () => {
     setModalOpen(true);
   };
@@ -48,7 +61,6 @@ const JobAlertItem = ({
   };
 
   const handleDeleteConfirm = () => {
-    
     console.log("Job deleted", item);
     setDeleteModalOpen(false); 
   };
@@ -68,8 +80,8 @@ const JobAlertItem = ({
           <div>{item.location}</div>
           <div>{item.category}</div>
         </td>
-        <td>Jobs found {jobDetails.found}</td>
-        <td>{jobDetails.time}</td>
+        <td>Tender found {item.found}</td>
+        <td>{item.created_at}</td>
         <td>
           <div className="action-dots float-end">
             <button
@@ -106,27 +118,25 @@ const JobAlertItem = ({
         </td>
       </tr>
 
-    
       <EditModal
         item={item}
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
-        initialData={jobDetails}
+        initialData={jobDetails} 
         onSave={handleSave}
       />
 
-     
       {isDeleteModalOpen && (
         <div
           className="modal fade show d-block"
           tabIndex={-1}
           role="dialog"
-          style={{ display: "block", zIndex: 1050 }} 
+          
         >
-          <div className="modal-dialog" role="document">
+          <div className="modal-dialog " role="document">
             <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Confirm Delete</h5>
+              <div className="modal-header bg-success ">
+                <h5 className="modal-title ">Confirm Delete</h5>
                 <button
                   type="button"
                   className="btn-close"
@@ -135,7 +145,7 @@ const JobAlertItem = ({
                 ></button>
               </div>
               <div className="modal-body">
-                <p>Are you sure you want to delete this job?</p>
+                <p>Are you sure you want to delete this tender?</p>
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" onClick={handleDeleteCancel}>

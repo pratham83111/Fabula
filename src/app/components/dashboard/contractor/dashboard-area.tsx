@@ -122,7 +122,7 @@ const DashboardArea = ({ setIsOpenSidebar }: IProps) => {
                       <ul className="dropdown-menu">
                         <li>
                           <a className="dropdown-item" href="#">
-                            View Job
+                            View Tender
                           </a>
                         </li>
                         <li>
