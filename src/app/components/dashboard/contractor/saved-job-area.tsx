@@ -31,7 +31,7 @@ const SavedJobArea = ({setIsOpenSidebar}:IProps) => {
         <div className="wrapper">
           {job_items.map((j) => (
             <div
-              key={j._id}
+              key={j.id}
               className="job-list-one style-two position-relative mb-20"
             >
               <div className="row justify-content-between align-items-center">
@@ -50,7 +50,7 @@ const SavedJobArea = ({setIsOpenSidebar}:IProps) => {
                   </div>
                 </div>
                 <div className="col-lg-3 col-md-4 col-sm-6 ms-auto">
-                  <Link href={`/job-details-v1/${j._id}`}
+                  <Link href={`/job-details-v1/${j.id}`}
                     className={`job-duration fw-500 ${
                       j.duration === "Part time" ? "part-time" : ""
                     }`}
