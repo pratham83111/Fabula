@@ -13,7 +13,6 @@ node_modules/
 *.iml
 
 # Dependency lock files
-yarn.lock
 package-lock.json
 
 # Cache and log files
