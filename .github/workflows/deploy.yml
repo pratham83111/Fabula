@@ -23,7 +23,7 @@ jobs:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.KEY }}
+          SSH_KEY: ${{ secrets.KEY }}
         run: |
           set -e
 
