@@ -16,8 +16,6 @@ export const create_job = async (data: any) => {
     // Get modeId from localStorage
     const modeId = localStorage.getItem("modeid");
 
-    console.log("Token:", token);
-    console.log("Mode ID:", modeId);
 
     if (!token) {
       throw new Error("No authentication token found. Please log in.");
@@ -42,7 +40,6 @@ export const create_job = async (data: any) => {
       }
     );
 
-    console.log(response);
     return response;
   } catch (error) {
     console.error("Error creating job:", error);
@@ -68,10 +65,8 @@ export const getAlljobs = async () => {
       `${BaseUrl}jobs/getall?page_number=1&page_size=11`
     );
 
-    console.log("woooo",response.data.data)
 
     const filteredJobs = response.data.data.filter((job: any) => job.userId.mode === modeId);
-    console.log("gajab",filteredJobs)
 
     return filteredJobs;
   } catch (error) {
@@ -82,7 +77,6 @@ export const getAlljobs = async () => {
 
 export const updateJobs = async (data:any) => {
   const { editId , values } = data;
-  console.log("valuesvaluesvaluesvalues",values);
   
  
   try {
@@ -100,7 +94,6 @@ export const updateJobs = async (data:any) => {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log("responseresponseresponse",response);
     
     return response.data; 
   } catch (error) {
@@ -112,7 +105,6 @@ export const updateJobs = async (data:any) => {
 
 
 export const deleteJobs = async (id: any) => {
-  console.log(id);
   try {
     const user: any = localStorage.getItem("IsLoginData");
     const parsedUser = JSON.parse(user);
@@ -138,12 +130,10 @@ export const deleteJobs = async (id: any) => {
 };
 
 export const viewJobs = async (id: any) => {
-  console.log(id);
   try {
     const user: any = localStorage.getItem("IsLoginData");
     const parsedUser = JSON.parse(user);
     const token = parsedUser.token;
-    console.log("sssssss",token)
 
     if (!token) {
       throw new Error("No authentication token found. Please log in.");

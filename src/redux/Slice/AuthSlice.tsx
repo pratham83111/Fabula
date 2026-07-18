@@ -107,7 +107,6 @@ const AuthSlice = createSlice({
     builder
     .addCase(createUserSlice.fulfilled, (state, action:any) => {
       
-      console.log(action.payload)
       state.createUser = action.payload;
       // state.createUser.push(action.payload as any) ;
       state.loading = false;
@@ -123,7 +122,6 @@ const AuthSlice = createSlice({
 
       .addCase(createLoginSlice.fulfilled, (state, action:any) => {
         // state.Subscription = action.payload;
-        console.log(action.payload)
         state.user.push(action.payload);
         state.loading = false;
         state.auth = true

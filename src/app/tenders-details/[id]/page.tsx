@@ -34,7 +34,6 @@ const JobDetailsDynamicPage = ({ params }: { params: { id: string } }) => {
 
   // const job = Array.isArray(contractorTenders) && contractorTenders.find((j) => j.id === params.id);
   const job = job_data.find((j)=>j.id === Number(params.id))
-  console.log("Selected job:",params.id);
 
   return (
     <Wrapper>

@@ -243,7 +243,6 @@ export const uploadGalleryImage = async (data: any) => {
 
 export const RemoveImageintoGallery = async (data: any) => {
   const { id, item } = data
-  console.log(id, item);
 
   const options = {
     method: 'DELETE',

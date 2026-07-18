@@ -3,7 +3,6 @@ import { ContractorTender, IJobType } from '@/types/job-data-type';
 import Image from 'next/image';
 import logo from '../../../../public/assets/images/assets/ogg.png'
 const JobDetailsV1Area = ({ tender }: { tender: ContractorTender }) => {
-	console.log("ABCDEFG",tender)
 	return (
 		<section className="job-details pt-100 lg-pt-80 pb-130 lg-pb-80">
 			<div className="container">

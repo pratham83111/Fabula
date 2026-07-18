@@ -1,0 +1,16 @@
+services:
+  fabula-next:
+    container_name: fabula-next
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: unless-stopped
+
+    ports:
+      - "4799:4799"
+
+    environment:
+      NODE_ENV: production
+      PORT: 4799

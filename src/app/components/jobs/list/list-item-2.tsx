@@ -8,7 +8,6 @@ import { add_to_wishlist } from "@/redux/features/wishlist";
 import logo from '../../../../../public/assets/images/assets/ogg.png'
 
 const ListItemTwo = ({ item }: { item: ContractorTender }) => {
-  console.log("ppp",item)
   const {wishlist} = useAppSelector(state => state.wishlist);
   const isActive = wishlist.some(p => p.id === item.id);
   const dispatch = useAppDispatch();

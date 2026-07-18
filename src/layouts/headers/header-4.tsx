@@ -18,7 +18,6 @@ const HeaderFour = () => {
       const abcd = localStorage.getItem("IsLoginData");
       const parsedData = abcd ? JSON.parse(abcd) : null;
       setLoginData(parsedData);
-      console.log(parsedData, "472093480923u80923809");
     }
   }, []);
 

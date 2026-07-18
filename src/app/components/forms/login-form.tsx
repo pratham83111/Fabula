@@ -66,7 +66,6 @@ const LoginForm = ({ onlogin }: any) => {
   const toggleLogin = () => {
     setIsLoggedIn((prevLoggedIn) => {
       const newLoggedIn = !prevLoggedIn;
-      console.log("isLoggedIn:", newLoggedIn);
       return newLoggedIn;
     });
   };

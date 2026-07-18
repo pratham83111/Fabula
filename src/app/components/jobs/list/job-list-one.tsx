@@ -11,7 +11,6 @@ export function JobListItems({style_2=false}:{style_2?:boolean}) {
 const [job_data,setJob_Data] = useState<any[]>([])
   useEffect(() => {
       try {
-        console.log("CCC", contractorTenders)
         setJob_Data(contractorTenders)
 
       } catch (error) {

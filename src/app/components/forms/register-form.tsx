@@ -23,7 +23,6 @@ const RegisterForm = ({ selectRole }: any) => {
   });
 
   const handleSubmit = (values :any, { setSubmitting, resetForm } :any) => {
-    console.log("Form values:", values);
     dispatch(createUserSlice({ ...values, mode: ModeId, role:selectRole }) as any);
     setUserRegister(true);
     localStorage.setItem("userData", JSON.stringify(values));

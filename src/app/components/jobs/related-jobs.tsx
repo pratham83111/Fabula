@@ -30,7 +30,6 @@ const slider_setting = {
 };
 const RelatedJobs = ({category}:{category:string[]}) => {
   const job_items = job_data.filter((job) => {
-    console.log("ABCDE",category)
     // return category.some((c) => job.category.includes(c));
     return job;
   });;

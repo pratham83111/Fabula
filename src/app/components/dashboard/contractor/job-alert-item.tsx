@@ -61,7 +61,6 @@ const JobAlertItem = ({
   };
 
   const handleDeleteConfirm = () => {
-    console.log("Job deleted", item);
     setDeleteModalOpen(false); 
   };
 
