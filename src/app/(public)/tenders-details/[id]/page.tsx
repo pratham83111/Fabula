@@ -5,7 +5,7 @@ import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
 import RelatedCarousel from "@/components/tenders/RelatedCarousel";
 import ShareButtons from "@/components/tenders/ShareButtons";
-import { getRelatedTenders, getTender, tenders } from "@/lib/data";
+import { formatMoney, getRelatedTenders, getTender, tenders } from "@/lib/data";
 import "@/styles/tenders.css";
 
 export function generateStaticParams() {
@@ -28,7 +28,7 @@ export default function TenderDetailsPage({ params }: { params: { id: string } }
     { n: 5, title: "Benefits:", text: tender.benefits },
   ];
   const rows: [string, string][] = [
-    ["Salary", String(tender.salary)],
+    ["Salary", formatMoney(tender.salary)],
     ["Expertise", tender.experience],
     ["Location", tender.location],
     ["Tender Type", tender.type],

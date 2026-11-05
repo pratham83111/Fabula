@@ -7,7 +7,7 @@ type T = { quote: string; name: string; role: string; rating: string };
 export default function HomeTestimonials({ title, items }: { title: string; items: T[] }) {
   const ref = useRef<HTMLDivElement>(null);
   const scroll = (d: number) => ref.current?.scrollBy({ left: d * 320, behavior: "smooth" });
-  const sizes = ["239X56", "180X50"];
+  const sizes = ["BuildCorp", "Northgate Group"];
   return (
     <div className="container">
       <div className="home-head">

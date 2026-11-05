@@ -99,10 +99,11 @@
   .tnd-filter-btn{display:none}
   .tnd-side{display:block;margin:0;position:sticky;top:90px}
   .tnd-list.grid{grid-template-columns:1fr 1fr;gap:0 18px}
-  .tnd-list.list .tnd-card{grid-template-columns:48px 1.8fr 1fr 1fr auto;padding:16px 22px}
+  .tnd-list.list .tnd-card{grid-template-columns:48px 1.8fr 1.1fr .9fr .8fr auto;column-gap:18px;padding:16px 22px}
   .tnd-list.list .tnd-info{grid-column:auto;margin:0}
   .tnd-list.list .tnd-logo{grid-row:auto}
   .tnd-list.list .tnd-badge,.tnd-list.list .tnd-price{display:block}
-  .tnd-list.list .tnd-actions{grid-column:auto;margin:0}
+  .tnd-list.list .tnd-actions{grid-column:auto;margin:0;justify-content:flex-end}
+  .tnd-list.list .tnd-price{text-align:right}
   .tnd-rcard{flex-basis:calc(25% - 12px)}
 }

@@ -48,16 +48,10 @@ export default function AboutPage() {
         <div className="container">
           <div className="pg-collage" style={{ maxWidth: 700, margin: "0 auto" }}>
             <div>
-              <div className="pg-ph" style={{ height: 130 }}>
-                321X197
-              </div>
-              <div className="pg-ph" style={{ height: 80, marginTop: 14, width: "60%" }}>
-                195X175
-              </div>
+              <div className="pg-ph pg-ph-1" role="img" aria-label="Crane above a building site" style={{ height: 170 }} />
+              <div className="pg-ph pg-ph-2" role="img" aria-label="Aerial view of an industrial site" style={{ height: 110, marginTop: 14, width: "60%" }} />
             </div>
-            <div className="pg-ph" style={{ height: 230 }}>
-              296X323
-            </div>
+            <div className="pg-ph pg-ph-3" role="img" aria-label="Tall buildings under a blue sky" style={{ height: 300 }} />
           </div>
         </div>
       </section>

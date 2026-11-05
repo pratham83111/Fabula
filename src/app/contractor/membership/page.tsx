@@ -14,7 +14,7 @@ export default function MembershipPage() {
           <p>{cur.description}</p>
         </div>
         <div className="db-cur-bot">
-          <span className="db-cur-price">${cur.price.replace("$", "").split(".")[0]}</span>
+          <span className="db-cur-price">{cur.price}</span>
           <div>
             <h3>{cur.cycle}</h3>
             <p>
