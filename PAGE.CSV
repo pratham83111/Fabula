@@ -1,0 +1,30 @@
+Fabula | Tender Project			 				
+User (Bidder/Contractor)							
+Web							
+Home			"Provides an overview of the job portal and may include featured job listings, trending industries, and search options
+- Overview
+- Search Bar
+- Featured Jobs
+- Trending Industry"	https://fabula.meander.software/	Featured tenders, explore tenders, subscription plans		
+Explore Tenders			Browse available tenders	https://fabula.meander.software/tenders-list	Search filters (category, location, budget, etc.)		
+Tender Details			View details of a specific tender	https://fabula.meander.software/tenders-details/1	Tender description, requirements, deadlines, documents		
+Place Bid			Submit a bid for a tender		Bid details, bid amount, proposal, attachments		
+My Bids			View bids submitted by the user		List of submitted bids, bid status, tender details		
+Subscription Plans			Explore available subscription plans	https://fabula.meander.software/pricing	Plan details, features, pricing		
+Help/Support			Access help resources and support	https://fabula.meander.software/contact	FAQs, tutorials, contact form		
+Social Media Links			Connect with the platform on social media	https://fabula.meander.software/	Links to social media profiles		
+Notifications			Manage notification preferences	https://fabula.meander.software/contractor/messages	Notification settings, frequency, preferences		
+Profile Settings			Manage user profile settings	https://fabula.meander.software/contractor/profile	Profile information, preferences, privacy settings		
+Payment Settings			Manage payment preferences	https://fabula.meander.software/contractor/membership	Payment methods, billing details, transaction history		
+Account Security			Manage account security settings	https://fabula.meander.software/contractor/setting	Password, two-factor authentication, security measures		
+Inbox/Message Center			View and manage messages	https://fabula.meander.software/contractor/messages	Inbox, message history, communication with users		
+Subscription Plans			"Displays available subscription plans for premium features
+Subscription Sign-up-Allows tenderers to sign up for subscription plans
+Subscription Management- Enables management of subscription settings and preferences
+Subscription Benefits- Highlights the benefits of subscribing to premium plans
+Subscription Renewal -Handles subscription renewals and provides renewal options"	https://fabula.meander.software/contractor/membership	Subscription tiers, Pricing details, Features		
+FAQs			frequently asked questions list is often used in articles, websites, email lists, and online forums where common questions tend to recur, for example through posts or queries by new users related to common knowledge gaps	https://fabula.meander.software/faq			
+Terms & Condition			As a user, I want to understand my rights and obligations, so I can use the app responsibly.	https://fabula.meander.software/terms&condition			
+404 Page			As a user, I want guidance when I reach a non-existent page, so I can return to useful sections of the app without frustration.	https://fabula.meander.software/erfggt			
+Cookie Policy			As a user, when I visit the website for the first time, I should see a pop-up or banner clearly informing me about the use of cookies on the site.	https://fabula.meander.software/cookies	High		
+About us			As a potential user, I want to learn more about the company behind the app, so I can decide if I want to engage with their services.	https://fabula.meander.software/about-us			

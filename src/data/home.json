@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "title": "Find your next contracting opportunity easily",
+    "subtitle": "Contractor jobs & projects. Find the opportunities that match contracting needs.",
+    "categories": ["Construction", "Renovation", "Engineering", "Landscaping"],
+    "locations": ["USA, California", "Canada, Toronto", "UK, London", "Australia, Sydney", "India, Mumbai"]
+  },
+  "roles": {
+    "title": "Most Demanding Contractor Roles.",
+    "items": [
+      { "title": "Experienced Contractors", "count": "12k+ Contractor Jobs" },
+      { "title": "Reliable Contractors", "count": "7k+ Contractor Jobs" },
+      { "title": "Licensed Contractors", "count": "250k+ Contractor Jobs" },
+      { "title": "Affordable Contractors", "count": "420k+ Contractor Jobs" },
+      { "title": "Service Contractors", "count": "3k+ Contractor Jobs" },
+      { "title": "Trade Contractors", "count": "160k+ Contractor Jobs" }
+    ]
+  },
+  "feature": {
+    "title": "Find the perfect contractor opportunities quickly.",
+    "text": "Whether you're a developer, designer, or marketer, discover contractor jobs that match your skills and expertise. Get started today and build the career you've always wanted.",
+    "cta": "Find contractor jobs. Explore all opportunities"
+  },
+  "stats": [
+    { "value": "7million", "label": "Completed Jobs" },
+    { "value": "30k+", "label": "Worldwide Client" },
+    { "value": "13billion", "label": "Dollar Payout" }
+  ],
+  "testimonials": {
+    "title": "Trusted by leading contractors.",
+    "items": [
+      { "quote": "Fabula eSignature has transformed the way we manage contractor agreements, saving us hours.", "name": "James Brower", "role": "Lead Contractor", "rating": "4.5 Excellent" },
+      { "quote": "Managing contractor contracts has never been easier thanks to Fabula eSignature.", "name": "Mark Joge", "role": "Project Manager", "rating": "4.8 Awesome" }
+    ]
+  },
+  "talents": {
+    "eyebrow": "LOOKING FOR AN EXPERT?",
+    "title": "Find top talents from fabula.",
+    "items": [
+      { "title": "Seamless Search", "text": "It only takes 5 minutes. Set up a smooth and simple, with fully customizable page design to reflect your brand. It only takes 5 minutes." },
+      { "title": "Hire top talents", "text": "Hire the best contractors from a verified pool of professionals." }
+    ]
+  },
+  "faqTitle": "Contractor FAQs",
+  "faqs": [
+    { "q": "What services do you offer as a contractor?", "a": "We provide a wide range of contracting services, including construction, renovation, and project management, tailored to meet client needs." },
+    { "q": "How do you ensure project deadlines are met?", "a": "We plan every project with clear milestones, assign dedicated managers and track progress weekly with the client." },
+    { "q": "What qualifications do your contractors have?", "a": "All contractors are licensed, insured and verified by our team before they can bid on tenders." },
+    { "q": "How do you handle project cost estimation?", "a": "We provide detailed itemised estimates up front and flag any changes before work begins." },
+    { "q": "What is your process for handling client feedback?", "a": "Feedback is collected at each milestone and addressed within two business days." }
+  ]
+}

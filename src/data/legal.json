@@ -1,0 +1,63 @@
+{
+  "terms": {
+    "title": "Terms & Conditions",
+    "subtitle": "Find your answers",
+    "items": [
+      {
+        "q": "User Responsibilities",
+        "a": "By accessing or using fabula, you agree to comply with these terms and conditions. If you do not agree with any part of these terms, you may not access the website."
+      },
+      {
+        "q": "Disclaimer of Warranties",
+        "a": "The service is provided as is without warranties of any kind, either express or implied."
+      },
+      {
+        "q": "User Conduct",
+        "a": "You agree not to misuse the platform, post misleading tenders or bids, or interfere with other users."
+      },
+      {
+        "q": "Third-Party Links",
+        "a": "Fabula may contain links to third-party websites. We are not responsible for their content or practices."
+      },
+      {
+        "q": "Termination of Access",
+        "a": "We may suspend or terminate your access at any time if you violate these terms."
+      }
+    ]
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "subtitle": "Find your answers",
+    "items": [
+      {
+        "q": "What Are Cookies",
+        "a": "Cookies are small pieces of data stored on your device (computer, tablet, or mobile) when you visit Fabula. They are widely used to make websites work more efficiently and to provide information to the website owners."
+      },
+      {
+        "q": "Types of Cookies",
+        "a": "We use essential cookies, preference cookies, analytics cookies and marketing cookies."
+      },
+      {
+        "q": "Why We Use Cookies",
+        "a": "Cookies keep you signed in, remember your preferences and help us understand how the site is used."
+      },
+      {
+        "q": "Third-Party Cookies",
+        "a": "Some cookies are set by third-party services such as analytics and maps providers."
+      },
+      {
+        "q": "Cookie Control",
+        "a": "You can control or delete cookies through your browser settings at any time."
+      },
+      {
+        "q": "Consent",
+        "a": "By continuing to use the site after seeing the cookie banner, you consent to our use of cookies."
+      },
+      {
+        "q": "Updates to the Cookie Policy",
+        "a": "We may update this policy from time to time. Changes will be posted on this page."
+      }
+    ]
+  },
+  "banner": "We use cookies to improve your experience on Fabula. By continuing you agree to our Cookie Policy."
+}

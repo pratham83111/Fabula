@@ -1,0 +1,28 @@
+{
+  "company": {
+    "name": "John Doe",
+    "email": "companyinc@gmail.com",
+    "website": "http://somename.come",
+    "size": "700",
+    "phone": "+880 01723801729",
+    "category": "Account, Finance, Marketing",
+    "about": "",
+    "socials": ["https://www.facebook.com/", "https://www.facebook.com/"],
+    "country": "Afghanistan",
+    "city": "Sydney",
+    "zip": "1708",
+    "state": "Sydney"
+  },
+  "account": { "firstName": "John Doe", "lastName": "Kabir", "email": "johndoe@example.com", "phone": "+810 321 889 021" },
+  "payments": {
+    "methods": [
+      { "id": 1, "brand": "Visa", "last4": "4242", "expires": "08/27", "default": true },
+      { "id": 2, "brand": "Mastercard", "last4": "1881", "expires": "03/26", "default": false }
+    ],
+    "transactions": [
+      { "id": 1, "date": "12/06/2023", "description": "Gold plan - monthly", "amount": "$27.99", "status": "Paid" },
+      { "id": 2, "date": "12/05/2023", "description": "Gold plan - monthly", "amount": "$27.99", "status": "Paid" },
+      { "id": 3, "date": "12/04/2023", "description": "Standard plan", "amount": "$0.00", "status": "Paid" }
+    ]
+  }
+}

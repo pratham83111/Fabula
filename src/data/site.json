@@ -1,0 +1,54 @@
+{
+  "name": "Fabula",
+  "tagline": "Most complete Contract portal.",
+  "taglineSub": "Signup and start find your job or Bidder.",
+  "copyright": "Copyright @2026 fabula inc.",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Tenders", "href": "/tenders-list" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "Services": [
+      { "label": "Browse Contracts", "href": "/tenders-list" },
+      { "label": "Companies", "href": "/about-us" },
+      { "label": "Contractors", "href": "/tenders-list" },
+      { "label": "Pricing", "href": "/pricing" }
+    ],
+    "Company": [
+      { "label": "About us", "href": "/about-us" },
+      { "label": "Blogs", "href": "/" },
+      { "label": "FAQ's", "href": "/faq" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "Support": [
+      { "label": "Terms of use", "href": "/terms-and-conditions" },
+      { "label": "Terms & conditions", "href": "/terms-and-conditions" },
+      { "label": "Privacy", "href": "/cookies" },
+      { "label": "Cookie policy", "href": "/cookies" }
+    ]
+  },
+  "social": [
+    { "label": "WhatsApp", "href": "https://wa.me/", "icon": "whatsapp" },
+    { "label": "Dribbble", "href": "https://dribbble.com/", "icon": "dribbble" },
+    { "label": "Google", "href": "https://google.com/", "icon": "google" },
+    { "label": "Instagram", "href": "https://instagram.com/", "icon": "instagram" }
+  ],
+  "dashboardNav": [
+    { "label": "Profile", "href": "/contractor/profile" },
+    { "label": "My Bids", "href": "/contractor/bids" },
+    { "label": "Messages", "href": "/contractor/messages" },
+    { "label": "Notifications", "href": "/contractor/notifications" },
+    { "label": "Membership", "href": "/contractor/membership" },
+    { "label": "Payments", "href": "/contractor/payments" },
+    { "label": "Account Settings", "href": "/contractor/setting" }
+  ],
+  "contact": {
+    "address": "Bass Hill Plaza Medical Centre",
+    "city": "Sydney, Australia",
+    "phone": "310.841.5500",
+    "liveChatLabel": "www.fabulalivechat.com",
+    "liveChatUrl": "https://www.fabulalivechat.com"
+  }
+}

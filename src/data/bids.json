@@ -1,0 +1,6 @@
+[
+  { "id": 1, "tenderId": 1, "tender": "Construction of Residential Building", "amount": "$480,000", "status": "Pending", "submitted": "10/01/2024" },
+  { "id": 2, "tenderId": 4, "tender": "Airport Terminal Construction", "amount": "$4,900,000", "status": "Accepted", "submitted": "05/01/2024" },
+  { "id": 3, "tenderId": 7, "tender": "School Building Renovation", "amount": "$640,000", "status": "Rejected", "submitted": "28/12/2023" },
+  { "id": 4, "tenderId": 8, "tender": "Public Park Landscaping", "amount": "$295,000", "status": "Pending", "submitted": "02/01/2024" }
+]

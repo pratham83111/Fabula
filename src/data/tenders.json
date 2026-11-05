@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Construction of Residential Building",
+    "location": "USA, California",
+    "type": "Open Tender",
+    "experience": "5+ years",
+    "salary": "500000",
+    "date": "1/1/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for construction of residential building with modern standards and sustainable practices.",
+    "description": "This project involves construction of residential building and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 2,
+    "title": "Roadway Expansion Project",
+    "location": "Canada, Toronto",
+    "type": "Limited Tender",
+    "experience": "7+ years",
+    "salary": "1200000",
+    "date": "1/2/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for roadway expansion project with modern standards and sustainable practices.",
+    "description": "This project involves roadway expansion project and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  },
+  {
+    "id": 3,
+    "title": "Bridge Repair and Maintenance",
+    "location": "UK, London",
+    "type": "Open Tender",
+    "experience": "3+ years",
+    "salary": "800000",
+    "date": "1/3/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for bridge repair and maintenance with modern standards and sustainable practices.",
+    "description": "This project involves bridge repair and maintenance and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Landscaping"
+  },
+  {
+    "id": 4,
+    "title": "Airport Terminal Construction",
+    "location": "Australia, Sydney",
+    "type": "Open Tender",
+    "experience": "10+ years",
+    "salary": "5000000",
+    "date": "1/4/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for airport terminal construction with modern standards and sustainable practices.",
+    "description": "This project involves airport terminal construction and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 5,
+    "title": "Water Treatment Plant Construction",
+    "location": "India, Mumbai",
+    "type": "Limited Tender",
+    "experience": "8+ years",
+    "salary": "2500000",
+    "date": "1/5/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for water treatment plant construction with modern standards and sustainable practices.",
+    "description": "This project involves water treatment plant construction and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  },
+  {
+    "id": 6,
+    "title": "Highway Maintenance and Repair",
+    "location": "USA, Texas",
+    "type": "Open Tender",
+    "experience": "5+ years",
+    "salary": "900000",
+    "date": "1/6/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for highway maintenance and repair with modern standards and sustainable practices.",
+    "description": "This project involves highway maintenance and repair and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Landscaping"
+  },
+  {
+    "id": 7,
+    "title": "School Building Renovation",
+    "location": "Canada, Vancouver",
+    "type": "Open Tender",
+    "experience": "5+ years",
+    "salary": "650000",
+    "date": "1/7/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for school building renovation with modern standards and sustainable practices.",
+    "description": "This project involves school building renovation and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 8,
+    "title": "Public Park Landscaping",
+    "location": "UK, Manchester",
+    "type": "Open Tender",
+    "experience": "3+ years",
+    "salary": "300000",
+    "date": "1/8/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for public park landscaping with modern standards and sustainable practices.",
+    "description": "This project involves public park landscaping and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  },
+  {
+    "id": 9,
+    "title": "Hospital Wing Extension",
+    "location": "USA, New York",
+    "type": "Limited Tender",
+    "experience": "9+ years",
+    "salary": "4200000",
+    "date": "1/9/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for hospital wing extension with modern standards and sustainable practices.",
+    "description": "This project involves hospital wing extension and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Landscaping"
+  },
+  {
+    "id": 10,
+    "title": "Metro Station Fit-out",
+    "location": "UK, Birmingham",
+    "type": "Open Tender",
+    "experience": "6+ years",
+    "salary": "3100000",
+    "date": "1/10/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for metro station fit-out with modern standards and sustainable practices.",
+    "description": "This project involves metro station fit-out and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 11,
+    "title": "Solar Farm Installation",
+    "location": "Australia, Perth",
+    "type": "Open Tender",
+    "experience": "4+ years",
+    "salary": "2750000",
+    "date": "1/11/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for solar farm installation with modern standards and sustainable practices.",
+    "description": "This project involves solar farm installation and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  },
+  {
+    "id": 12,
+    "title": "Sewer Pipeline Replacement",
+    "location": "Canada, Calgary",
+    "type": "Limited Tender",
+    "experience": "6+ years",
+    "salary": "1450000",
+    "date": "1/12/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for sewer pipeline replacement with modern standards and sustainable practices.",
+    "description": "This project involves sewer pipeline replacement and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Landscaping"
+  },
+  {
+    "id": 13,
+    "title": "Shopping Mall Electrical Works",
+    "location": "India, Delhi",
+    "type": "Open Tender",
+    "experience": "5+ years",
+    "salary": "980000",
+    "date": "1/1/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for shopping mall electrical works with modern standards and sustainable practices.",
+    "description": "This project involves shopping mall electrical works and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 14,
+    "title": "Dam Spillway Rehabilitation",
+    "location": "USA, Oregon",
+    "type": "Open Tender",
+    "experience": "10+ years",
+    "salary": "6200000",
+    "date": "1/2/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for dam spillway rehabilitation with modern standards and sustainable practices.",
+    "description": "This project involves dam spillway rehabilitation and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  },
+  {
+    "id": 15,
+    "title": "Office Tower Facade Works",
+    "location": "Australia, Melbourne",
+    "type": "Open Tender",
+    "experience": "7+ years",
+    "salary": "3800000",
+    "date": "1/3/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for office tower facade works with modern standards and sustainable practices.",
+    "description": "This project involves office tower facade works and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Landscaping"
+  },
+  {
+    "id": 16,
+    "title": "Railway Track Renewal",
+    "location": "UK, Leeds",
+    "type": "Limited Tender",
+    "experience": "8+ years",
+    "salary": "4400000",
+    "date": "1/4/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for railway track renewal with modern standards and sustainable practices.",
+    "description": "This project involves railway track renewal and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 17,
+    "title": "Stadium Seating Upgrade",
+    "location": "India, Chennai",
+    "type": "Open Tender",
+    "experience": "4+ years",
+    "salary": "1700000",
+    "date": "1/5/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for stadium seating upgrade with modern standards and sustainable practices.",
+    "description": "This project involves stadium seating upgrade and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  },
+  {
+    "id": 18,
+    "title": "Port Crane Maintenance",
+    "location": "Canada, Halifax",
+    "type": "Open Tender",
+    "experience": "6+ years",
+    "salary": "2100000",
+    "date": "1/6/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for port crane maintenance with modern standards and sustainable practices.",
+    "description": "This project involves port crane maintenance and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Landscaping"
+  },
+  {
+    "id": 19,
+    "title": "Affordable Housing Complex",
+    "location": "USA, Chicago",
+    "type": "Open Tender",
+    "experience": "5+ years",
+    "salary": "5400000",
+    "date": "1/7/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for affordable housing complex with modern standards and sustainable practices.",
+    "description": "This project involves affordable housing complex and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Construction"
+  },
+  {
+    "id": 20,
+    "title": "Street Lighting Modernisation",
+    "location": "UK, Bristol",
+    "type": "Open Tender",
+    "experience": "3+ years",
+    "salary": "760000",
+    "date": "1/8/2024",
+    "postedBy": "Fabula Procurement",
+    "overview": "Tender for street lighting modernisation with modern standards and sustainable practices.",
+    "description": "This project involves street lighting modernisation and will include state-of-the-art amenities, safety compliance and quality documentation.",
+    "responsibilities": "Lead the project, manage the team, ensure timely completion, and maintain safety standards.",
+    "benefits": "Competitive payment terms, insurance cover, and long-term partnership opportunities.",
+    "tags": [
+      "building",
+      "residential",
+      "contractor"
+    ],
+    "industry": "Engineering"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "title": "About us",
+  "heading": "We've been helping customer globally.",
+  "accordion": [
+    { "q": "Who we are?", "a": "Our founders Dustin Moskovitz and Justin lorem Rosenstein met while leading Engineering teams at Facebook quesi. Lorem ipsum dolor sit, amet consectetur adipisicing elit." },
+    { "q": "What's our goal", "a": "To connect contractors and tenderers on one transparent, easy-to-use portal." },
+    { "q": "Our vision", "a": "A global marketplace where every contract is found, bid on and signed in minutes." }
+  ],
+  "testimonial": { "quote": "Fabula eSignature has transformed the way we manage contractor agreements, saving us hours.", "name": "James Brower", "role": "Lead Contractor", "rating": "4.5 Excellent" }
+}

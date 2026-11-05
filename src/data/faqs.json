@@ -1,0 +1,12 @@
+{
+  "categories": ["All", "Marketing", "Buying", "User Manual", "Payments", "Terms & Conditions", "Account"],
+  "items": [
+    { "category": "Payments", "q": "How does the free trial work?", "a": "The free trial gives you full access to the Standard plan for 14 days. No credit card is required." },
+    { "category": "User Manual", "q": "How do you find different criteria in your process?", "a": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
+    { "category": "Marketing", "q": "What do you look for in a founding team?", "a": "We look for complementary skills, proven delivery and a clear understanding of the contracting market." },
+    { "category": "Buying", "q": "Do you recommend Pay as you go or Pre pay?", "a": "Pre pay plans are cheaper per posting, while Pay as you go offers more flexibility for occasional use." },
+    { "category": "Payments", "q": "What do I get for $0 with my plan?", "a": "The Standard plan includes 15 job postings, 7 featured jobs and posts live for 30 days." },
+    { "category": "Account", "q": "How do I change my password?", "a": "Open Account Settings in your dashboard and use the Change Password form." },
+    { "category": "Terms & Conditions", "q": "Where can I read the terms?", "a": "Our full terms are available on the Terms & Conditions page linked in the footer." }
+  ]
+}

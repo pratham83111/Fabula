@@ -1,0 +1,17 @@
+{
+  "title": "Simple Plan for All",
+  "subtitle": "Choose your membership",
+  "note": "We have done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+  "current": {
+    "name": "Gold",
+    "description": "Unlimited access to our legal document library and online rental application tool, billed monthly.",
+    "cycle": "Monthly Plan",
+    "price": "$27.99",
+    "renews": "July 12th, 2023"
+  },
+  "plans": [
+    { "name": "Standard", "price": "0", "currency": "", "cents": "", "popular": false, "features": ["15 job posting", "7 featured job", "Job post live for 30 days"] },
+    { "name": "Gold", "price": "27", "currency": "$", "cents": "99", "popular": true, "features": ["30 job posting", "15 featured job", "Job post live for 60 days"] },
+    { "name": "Diamond", "price": "39", "currency": "$", "cents": "99", "popular": false, "features": ["60 job posting", "30 featured job", "Job post live for 130 days"] }
+  ]
+}

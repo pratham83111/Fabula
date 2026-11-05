@@ -1,0 +1,29 @@
+{
+  "total": 120,
+  "inbox": [
+    { "id": 1, "from": "Jenny Rio.", "date": "AUG 22", "subject": "Work inquiry from google.", "preview": "Hello, This is Jenny from google. We're the largest online platform offer...", "status": "read", "attachment": "details.pdf" },
+    { "id": 2, "from": "Hasan Islam.", "date": "MAY 22", "subject": "Account Manager", "preview": "Hello, Greeting from Uber. Hope you doing great. I am approcing to you for..", "status": "primary", "attachment": "" }
+  ],
+  "open": {
+    "from": "Payoneer",
+    "email": "payoneer@inquiry.com",
+    "time": "4:45AM (3 hours ago)",
+    "subject": "Account Manager.",
+    "body": [
+      "Hello, Greeting from Uber. Hope you doing great. I am approaching to you for as our company need a great & talented account manager.",
+      "What we need from you to start: Your CV, Verified Gov ID",
+      "After that we need to redesign our landing page because the current one does not carry any information. If you have any question don't hesitate to contact us.",
+      "Our Telegram @payoneer. Thank you!"
+    ],
+    "attachments": [
+      { "name": "project-details.pdf", "size": "2.3mb" },
+      { "name": "form.pdf", "size": "1.3mb" }
+    ]
+  },
+  "notifications": [
+    { "id": 1, "label": "New tenders matching my profile", "email": true, "push": true },
+    { "id": 2, "label": "Bid status updates", "email": true, "push": true },
+    { "id": 3, "label": "New messages", "email": false, "push": true },
+    { "id": 4, "label": "Subscription and billing", "email": true, "push": false }
+  ]
+}
