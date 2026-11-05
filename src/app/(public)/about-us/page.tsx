@@ -3,12 +3,12 @@ import "@/styles/pages.css";
 import Accordion from "@/components/Accordion";
 import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
+import AboutTestimonials from "@/components/pages/AboutTestimonials";
 import { about } from "@/lib/data";
 
 export const metadata: Metadata = { title: "About us" };
 
 export default function AboutPage() {
-  const t = about.testimonial;
   return (
     <>
       <PageHero title={about.title} crumbs="Home › About" />
@@ -64,30 +64,7 @@ export default function AboutPage() {
 
       <section className="pg-dark">
         <div className="container">
-          <div className="pg-tcard">
-            <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
-            <small>
-              <strong>{t.name}</strong>, {t.role}
-            </small>
-            <div className="pg-row">
-              <span>{t.rating}</span>
-              <span style={{ letterSpacing: 2 }} aria-label="4.5 stars">
-                ★★★★★
-              </span>
-            </div>
-          </div>
-          <div className="pg-arrows">
-            <button aria-label="Previous">
-              <svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="#fff" strokeWidth="1.8">
-                <path d="M26 7H1M7 1L1 7l6 6" />
-              </svg>
-            </button>
-            <button aria-label="Next">
-              <svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="#fff" strokeWidth="1.8">
-                <path d="M0 7h25M19 1l6 6-6 6" />
-              </svg>
-            </button>
-          </div>
+          <AboutTestimonials items={about.testimonials} />
         </div>
       </section>
 

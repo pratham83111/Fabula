@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useAuth } from "./auth/AuthProvider";
 import Logo from "./Logo";
 import { site } from "@/lib/data";
 
 export default function Header({ solid = false }: { solid?: boolean }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { openLogin } = useAuth();
 
   return (
     <header className={`header ${solid ? "header-solid" : ""}`}>
@@ -22,10 +24,10 @@ export default function Header({ solid = false }: { solid?: boolean }) {
           ))}
         </nav>
         <div className="header-actions">
-          <Link href="/contractor/profile" className="login-link">
+          <button type="button" className="login-link" onClick={openLogin}>
             Login
-          </Link>
-          <Link href="/contractor/profile" className="btn btn-bright btn-sm">
+          </button>
+          <Link href="/register" className="btn btn-bright btn-sm">
             Register
           </Link>
         </div>
@@ -42,8 +44,18 @@ export default function Header({ solid = false }: { solid?: boolean }) {
               {item.label}
             </Link>
           ))}
-          <Link href="/contractor/profile" onClick={() => setOpen(false)}>
-            Login / Register
+          <button
+            type="button"
+            style={{ textAlign: "left", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,.1)" }}
+            onClick={() => {
+              setOpen(false);
+              openLogin();
+            }}
+          >
+            Login
+          </button>
+          <Link href="/register" onClick={() => setOpen(false)}>
+            Register
           </Link>
         </div>
       )}

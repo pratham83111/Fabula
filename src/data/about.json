@@ -6,5 +6,9 @@
     { "q": "What's our goal", "a": "To connect contractors and tenderers on one transparent, easy-to-use portal." },
     { "q": "Our vision", "a": "A global marketplace where every contract is found, bid on and signed in minutes." }
   ],
-  "testimonial": { "quote": "Fabula eSignature has transformed the way we manage contractor agreements, saving us hours.", "name": "James Brower", "role": "Lead Contractor", "rating": "4.5 Excellent" }
+  "testimonials": [
+    { "quote": "Fabula eSignature has transformed the way we manage contractor agreements, saving us hours.", "name": "James Brower", "role": "Lead Contractor", "rating": "4.5 Excellent" },
+    { "quote": "Managing contractor contracts has never been easier thanks to Fabula eSignature.", "name": "Mark Joge", "role": "Project Manager", "rating": "4.8 Awesome" },
+    { "quote": "We found three reliable contractors for our expansion project within a week.", "name": "Sara Lindholm", "role": "Operations Director", "rating": "4.7 Excellent" }
+  ]
 }

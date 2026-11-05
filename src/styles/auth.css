@@ -1,0 +1,76 @@
+/* Login modal + Register page. All classes prefixed `au-`. */
+
+.au-overlay {
+  position: fixed; inset: 0; z-index: 100; background: rgba(20, 30, 25, .55);
+  display: grid; place-items: start center; overflow-y: auto; padding: 24px 16px;
+}
+.au-modal {
+  position: relative; width: 100%; max-width: 724px; background: #fff; border-radius: 26px;
+  padding: 44px 24px 32px; margin: auto; box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+}
+.au-close {
+  position: absolute; top: 18px; right: 20px; width: 32px; height: 32px; display: grid; place-items: center;
+  color: #6d7a74; border-radius: 50%;
+}
+.au-close:hover { background: var(--sage); color: var(--dark); }
+
+.au-card { max-width: 565px; margin: 0 auto; }
+.au-card-page { background: #fff; border-radius: 22px; padding: 32px 22px 28px; max-width: 640px; }
+.au-title { font-family: var(--font-serif); font-weight: 500; font-size: clamp(2.1rem, 6vw, 3.2rem); text-align: center; line-height: 1.1; color: var(--dark); }
+.au-card-page .au-title { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.au-sub { text-align: center; margin: 14px 0 28px; font-size: 1rem; color: var(--text); }
+.au-sub a, .au-foot a { color: var(--green); }
+.au-foot a { font-weight: 600; }
+
+.au-form { display: grid; gap: 18px; }
+.au-field label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
+.au-field input {
+  width: 100%; height: 55px; background: var(--sage); border: 1px solid transparent; border-radius: 8px;
+  padding: 0 20px; font-size: 1rem; outline: 0; transition: border-color .15s, background .15s;
+}
+.au-field input::placeholder { color: #8ba096; }
+.au-field input:focus { border-color: var(--green); background: #f4f8f6; }
+.au-field input[aria-invalid="true"] { border-color: #d64545; }
+
+.au-pass { position: relative; }
+.au-pass input { padding-right: 56px; }
+.au-eye { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--dark); width: 32px; height: 32px; display: grid; place-items: center; }
+
+.au-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .95rem; }
+.au-check { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+.au-check input { margin-top: 5px; width: 16px; height: 16px; accent-color: var(--green); flex: none; }
+.au-forgot:hover { color: var(--green); text-decoration: underline; }
+.au-terms { font-size: .95rem; line-height: 1.5; }
+.au-terms a { color: var(--green); text-decoration: underline; }
+
+.au-error { color: #c0392b; font-size: .85rem; }
+
+.au-submit {
+  width: 100%; height: 60px; border-radius: 8px; background: var(--green); color: #fff;
+  font-weight: 600; letter-spacing: .08em; font-size: .95rem; transition: background .15s;
+}
+.au-submit:hover { background: #276649; }
+.au-submit:focus-visible, .au-social-btn:focus-visible, .au-tab:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+
+.au-or { display: flex; align-items: center; gap: 22px; margin: 24px 0 20px; color: var(--text); }
+.au-or::before, .au-or::after { content: ""; flex: 1; height: 1px; background: #c9d2cd; }
+.au-social { display: grid; gap: 12px; }
+.au-social-btn {
+  display: flex; align-items: center; justify-content: center; gap: 12px; height: 54px; border: 1px solid var(--line);
+  border-radius: 6px; background: #fff; font-size: 1rem; transition: background .15s;
+}
+.au-social-btn:hover { background: var(--sage); }
+.au-foot { text-align: center; margin-top: 18px; }
+.au-linkbtn { color: var(--green); font-weight: 600; }
+.au-linkbtn:hover { text-decoration: underline; }
+
+.au-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--sage); border-radius: 999px; margin: 22px 0 26px; padding: 0; }
+.au-tab { height: 46px; border-radius: 999px; color: var(--muted); font-size: 1rem; border: 1px solid transparent; }
+.au-tab.on { background: #fff; border-color: var(--green); color: var(--green); }
+.au-section { font-family: var(--font-serif); font-weight: 600; font-size: 1.4rem; margin-top: 10px; margin-bottom: -8px; color: var(--dark); }
+
+@media (min-width: 768px) {
+  .au-modal { padding: 52px 80px 36px; }
+  .au-social { grid-template-columns: 1fr 1fr; }
+  .au-card-page { padding: 44px 56px 36px; }
+}

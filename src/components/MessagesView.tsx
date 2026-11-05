@@ -30,7 +30,7 @@ export default function MessagesView() {
     const q = search.trim().toLowerCase();
     return matchFilter && (!q || m.from.toLowerCase().includes(q) || m.subject.toLowerCase().includes(q));
   });
-  const open = messages.open;
+  const open = messages.threads.find((t) => t.id === selected) ?? messages.threads[0];
   const go = (p: number) => setPage(Math.min(pages, Math.max(1, p)));
 
   return (
@@ -93,7 +93,7 @@ export default function MessagesView() {
           {list.length === 0 && <p className="db-empty">No messages found.</p>}
         </section>
 
-        <article className="db-read" aria-label="Opened message">
+        <article key={open.id} className="db-read" aria-label="Opened message">
           <div className="db-read-head">
             <span className="db-sender" style={{ color: "#fff" }}><PayoneerMark /></span>
             <div className="who">
