@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { bids } from "@/lib/data";
+import CompanyLogo from "@/components/CompanyLogo";
+import { bids, getTender } from "@/lib/data";
 
 export const metadata: Metadata = { title: "My Bids" };
 
@@ -23,9 +24,17 @@ export default function BidsPage() {
               {bids.map((b) => (
                 <tr key={b.id}>
                   <td>
-                    <Link href={`/tenders-details/${b.tenderId}`} className="db-link">
-                      {b.tender}
-                    </Link>
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      <CompanyLogo name={getTender(b.tenderId)?.company ?? b.tender} size={36} />
+                      <div>
+                        <Link href={`/tenders-details/${b.tenderId}`} className="db-link">
+                          {b.tender}
+                        </Link>
+                        <div className="db-hint" style={{ fontSize: ".78rem" }}>
+                          {getTender(b.tenderId)?.company}
+                        </div>
+                      </div>
+                    </div>
                   </td>
                   <td>{b.amount}</td>
                   <td>

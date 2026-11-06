@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import CompanyLogo from "@/components/CompanyLogo";
 import DemoForm from "@/components/DemoForm";
 import Field from "@/components/Field";
 import PageHero from "@/components/PageHero";
@@ -23,7 +24,7 @@ export default function PlaceBidPage({ params }: { params: { id: string } }) {
         <div className="container">
           <div className="tnd-bidcard">
             <div className="tnd-bidsum">
-              <div className="tnd-logo" aria-hidden />
+              <CompanyLogo name={tender.company} size={48} />
               <div>
                 <div className="tnd-title">{tender.title}</div>
                 <div className="tnd-meta">{tender.location} &middot; {tender.type}</div>

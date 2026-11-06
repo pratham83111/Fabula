@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import CompanyLogo from "@/components/CompanyLogo";
 import type { Tender } from "@/lib/data";
 import { Bookmark } from "@/components/tenders/icons";
 import "@/styles/tenders.css";
@@ -10,7 +11,7 @@ export default function TenderRow({ tender, showApply = false }: { tender: Tende
   const [saved, setSaved] = useState(false);
   return (
     <div className="tnd-card">
-      <div className="tnd-logo" aria-hidden />
+      <CompanyLogo name={tender.company} size={48} className="tnd-logo" />
       <div className="tnd-title">{tender.title}..</div>
       <div className="tnd-info">
         <div className="tnd-meta">{tender.location}</div>

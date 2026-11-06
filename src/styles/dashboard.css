@@ -1,11 +1,11 @@
 .db-root{--db-dark:#264234;--db-green:#2f7a58;--db-lime:#d4f24e;--db-bg:#eef3f0;--db-line:#d9e3de;--db-muted:#667a70;min-height:100vh;background:var(--db-bg);color:#1c2b24;font-family:var(--font-sans);}
-.db-root button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit;font-size:inherit}
+:where(.db-root button){font-family:inherit;cursor:pointer;border:0;background:none;color:inherit;font-size:inherit}
 .db-root :focus-visible{outline:2px solid var(--db-green);outline-offset:2px}
 .db-top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;height:70px;padding:0 20px;background:var(--db-bg);border-bottom:1px solid var(--db-line);}
 .db-top-title{display:none;font-size:1.4rem;font-weight:600;color:var(--db-dark)}
 .db-iconbtn{position:relative;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;color:var(--db-dark)}
 .db-dot{position:absolute;top:8px;right:9px;width:9px;height:9px;border-radius:50%;background:#f0342c}
-.db-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#c98b6a,#7a4e3d);display:none}
+.db-avatar{width:40px;height:40px;border-radius:50%;background:url("/images/avatar.jpg") center/cover no-repeat;display:none}
 .db-top-right{display:flex;align-items:center;gap:12px}
 .db-overlay{position:fixed;inset:0;background:rgba(20,35,28,.5);z-index:40}
 .db-side{position:fixed;top:0;left:0;bottom:0;width:280px;max-width:84vw;background:var(--db-dark);color:#fff;z-index:50;padding:24px 18px;display:flex;flex-direction:column;gap:4px;overflow:auto;transform:translateX(-100%);transition:transform .25s;visibility:hidden}
@@ -39,7 +39,7 @@
 .db-actions{display:flex;align-items:center;gap:24px;margin-top:26px}
 .db-cancel{color:var(--db-green)!important;font-size:1.05rem}
 .db-photo{display:flex;align-items:center;gap:14px;margin-bottom:24px;flex-wrap:wrap}
-.db-photo .db-pic{width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#e8bfa0 0 28%,#7a4e3d 30% 60%,#d9e3de 62%)}
+.db-photo .db-pic{width:72px;height:72px;border-radius:50%;background:url("/images/avatar.jpg") center/cover no-repeat;border:3px solid #fff;box-shadow:0 2px 10px rgba(38,66,52,.18);flex:none}
 .db-photo .db-btn-lime{flex:1;max-width:220px}
 .db-grid2{display:grid;gap:0 20px}
 .db-cur{border:1px solid var(--db-dark);border-radius:14px;margin-bottom:30px;overflow:hidden}
@@ -136,3 +136,5 @@
  .db-split .db-read{margin:0;border-radius:24px;padding:24px;background:#fff;border:1px solid var(--db-line)}
  .db-split .db-reply{background:#fff}
 }
+.db-cols{display:grid;gap:0 20px}
+@media(min-width:900px){.db-cols{grid-template-columns:1fr 1fr}}

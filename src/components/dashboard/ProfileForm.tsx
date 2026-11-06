@@ -21,6 +21,7 @@ export default function ProfileForm({ c }: { c: Company }) {
           <button type="button" className="db-btn db-btn-lime db-btn-sm">Upload new photo</button>
           <button type="button" style={{ color: "#111" }}>Delete</button>
         </div>
+        <div className="db-cols">
         <DbField label="Employer Name*" name="name" defaultValue={c.name} required />
         <DbField label="Email*" name="email" type="email" defaultValue={c.email} required />
         <DbField label="Website*" name="website" defaultValue={c.website} />
@@ -28,6 +29,7 @@ export default function ProfileForm({ c }: { c: Company }) {
         <DbField label="Company Size*" name="size" defaultValue={c.size} />
         <DbField label="Phone Number*" name="phone" defaultValue={c.phone} />
         <DbField label="Category*" name="category" defaultValue={c.category} />
+        </div>
         <DbField label="About Company*" name="about" textarea placeholder="Write something interesting about you...." defaultValue={c.about} />
         <p className="db-hint" style={{ marginTop: -6 }}>Brief description for your company. URLs are hyperlinked.</p>
       </div>

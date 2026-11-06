@@ -1,3 +1,4 @@
+import { roleIcons } from "@/components/home/RoleIcons";
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import HomeAccordion from "@/components/home/HomeAccordion";
@@ -6,7 +7,7 @@ import HomeTestimonials from "@/components/home/HomeTestimonials";
 import { home, tenders } from "@/lib/data";
 import "@/styles/home.css";
 
-const icons = ["✎", "‹›", "✆", "▣", "≡", "▥"];
+const icons = roleIcons;
 
 export default function HomePage() {
   const latest = tenders.slice(0, 5);

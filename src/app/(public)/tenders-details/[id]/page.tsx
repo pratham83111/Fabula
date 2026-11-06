@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CompanyLogo from "@/components/CompanyLogo";
 import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
 import RelatedCarousel from "@/components/tenders/RelatedCarousel";
@@ -45,7 +46,7 @@ export default function TenderDetailsPage({ params }: { params: { id: string } }
           <div>
             <div className="tnd-dhead">
               <div className="tnd-date">{tender.date} by</div>
-              <div className="tnd-by">{tender.title}</div>
+              <div className="tnd-by">{tender.company}</div>
               <h2 className="tnd-dtitle">{tender.title}</h2>
               <ShareButtons title={tender.title} />
             </div>
@@ -62,7 +63,9 @@ export default function TenderDetailsPage({ params }: { params: { id: string } }
 
           <aside className="tnd-aside">
             <div className="tnd-aside-top">
-              <div className="tnd-logo" aria-hidden />
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: 14 }}>
+                <CompanyLogo name={tender.company} size={72} />
+              </div>
               <p>{tender.title}</p>
               <Link href="/tenders-list" className="btn btn-dark btn-sm">
                 Visit website

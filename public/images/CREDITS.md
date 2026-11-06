@@ -6,7 +6,8 @@ Replace them with the real brand photos when you have them (keep the same file n
 
 | File | Unsplash photo ID | Page |
 |---|---|---|
-| hero-home.jpg | EuYrxc_Amkc (Eric Stoynov) | Home hero |
+| hero-home.jpg | lPUalY6OKDU (Fiqih Alfarish) | Home hero |
+| avatar.jpg | iFgRcqHznqg (Joseph Gonzalez) | Dashboard profile / top-bar avatar |
 | feature-office.jpg | 8mXAvhTwE7I (Marcus Reubenstein) | Home brown card |
 | feature-building.jpg | PlBsJ5MybGc | Home brown card (small) |
 | talents-1.jpg | VLPUm5wP5Z0 | Home "Find top talents" |

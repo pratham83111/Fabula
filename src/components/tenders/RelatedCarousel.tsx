@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import CompanyLogo from "@/components/CompanyLogo";
 import type { Tender } from "@/lib/data";
 import { Arrow, Bookmark } from "./icons";
 import "@/styles/tenders.css";
@@ -20,7 +21,7 @@ export default function RelatedCarousel({ items }: { items: Tender[] }) {
           {items.map((t) => (
             <div key={t.id} className="tnd-rcard">
               <div className="tnd-rtop">
-                <div className="tnd-rlogo" aria-hidden />
+                <CompanyLogo name={t.company} size={34} radius={8} />
                 <span className="tnd-save" style={{ width: 28, height: 28 }} aria-hidden>
                   <Bookmark />
                 </span>
